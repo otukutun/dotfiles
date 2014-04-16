@@ -1,0 +1,5 @@
+*\.swp
+.init.vimrc
+.local.vimrc
+.vim/bundle/*
+.vim/bundle/neobundle.vim
