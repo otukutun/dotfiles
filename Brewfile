@@ -7,6 +7,7 @@ update
 # Packages
 install wget
 install tig
+install zsh
 install ag
 install tmux
 install libevent
