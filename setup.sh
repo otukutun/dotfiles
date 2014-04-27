@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ~
-mkdir bin swap backup tmp memo tags src .trash .tmux
+#mkdir bin swap backup tmp memo tags src .trash .tmux
 mkdir -p ~/etc/profile.d
 
 #git
