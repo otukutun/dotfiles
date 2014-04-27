@@ -41,7 +41,7 @@ fi
 cd ~/dotfiles/
 
 #oh-my-zsh download
-git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/oh-my-zsh.git
+git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/oh-my-zsh
 
 #oh-my-zsh setting
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/dotfiles/zsh sh
