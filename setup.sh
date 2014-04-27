@@ -5,8 +5,8 @@ mkdir bin swap backup tmp memo tags src .trash .tmux
 mkdir -p ~/etc/profile.d
 
 #git
-curl -S -o ~/etc/profile.d/git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
-curl -S -o ~/etc/profile.d/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+curl -S -o ~/dotfiles/git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+curl -S -o ~/dotfiles/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 
 
 #simlink
