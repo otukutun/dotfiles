@@ -33,7 +33,6 @@ NeoBundle 'Shougo/unite.vim'
 
 NeoBundle 'Shougo/neocomplcache'
 "NeoBundle 'Shougo/neocomplcache-snippets-complete'
-NeoBundle 'hougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 "NeoBundle 'scrooloose/nerdtree'
