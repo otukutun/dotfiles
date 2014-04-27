@@ -5,5 +5,3 @@
         editor = /usr/bin/vim
 [color]
         ui = auto
-[push]
-        default = simple
