@@ -2,7 +2,7 @@
 
 cd ~
 #mkdir bin swap backup tmp memo tags src .trash .tmux
-mkdir -p ~/etc/profile.d
+#mkdir -p ~/etc/profile.d
 
 #git
 curl -S -o ~/dotfiles/git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
