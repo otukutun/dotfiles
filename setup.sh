@@ -10,6 +10,7 @@ curl -S -o ~/etc/profile.d/git-completion.bash https://raw.github.com/git/git/ma
 
 #simlink
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.profile ~/.profile
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.vim ~/.vim
@@ -17,7 +18,16 @@ ln -sf ~/dotfiles/.gitignore ~/.gitignore
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/Brewfile ~/Brewfile
 
-
+# Mac
+if [ `uname` = "Darwin" ]; then
+  if [ -z `which brew` ]; then
+    # home brew
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    # php
+    curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
+  fi
+  brew bundle
+fi
 cd ~/dotfiles/
 
 git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim
