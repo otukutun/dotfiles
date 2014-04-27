@@ -8,6 +8,7 @@ mkdir -p ~/etc/profile.d
 curl -S -o ~/etc/profile.d/git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 curl -S -o ~/etc/profile.d/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 
+
 #simlink
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
@@ -30,6 +31,12 @@ if [ `uname` = "Darwin" ]; then
 fi
 cd ~/dotfiles/
 
+#oh-my-zsh
+git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/oh-my-zsh.git
+
+#oh-my-zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/dotfiles/zsh sh
+#neobundle,tmux,color-theme
 git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim
 git clone git://github.com/erikw/tmux-powerline ~/dotfiles/.vim/bundle/tmux-powerline
 git clone git://github.com/seebi/dircolors-solarized ~/dotfiles/.vim/bundle/dircolors-solarized
