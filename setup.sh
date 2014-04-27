@@ -2,11 +2,13 @@
 
 cd ~
 #mkdir bin swap backup tmp memo tags src .trash .tmux
-#mkdir -p ~/etc/profile.d
 
 #git
 curl -S -o ~/dotfiles/git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 curl -S -o ~/dotfiles/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+
+#vim color
+curl -S -o ~/dotfiles/.vim/colors/jellybeans.vim https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
 
 
 #bash or zsh simlink
@@ -47,6 +49,8 @@ git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/oh-my-zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/dotfiles/zsh sh
 
 #neobundle,tmux,color-theme
+mkdir -p ~/.vim/bundle
+
 git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim
 git clone git://github.com/erikw/tmux-powerline ~/dotfiles/.vim/bundle/tmux-powerline
 git clone git://github.com/seebi/dircolors-solarized ~/dotfiles/.vim/bundle/dircolors-solarized
