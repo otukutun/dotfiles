@@ -14,6 +14,7 @@ curl -S -o ~/dotfiles/.vim/colors/jellybeans.vim https://raw.githubusercontent.c
 #bash or zsh simlink
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.oh-my-zsh/oh-my-zsh.sh ~/.oh-my-zsh/oh-my-zsh.sh
 
 #bash'sgit config simlink
 ln -sf ~/dotfiles/git-prompt.sh ~/.git-prompt.sh
