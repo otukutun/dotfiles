@@ -51,8 +51,7 @@ nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
 "unite.vim
-nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files
-buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
