@@ -44,7 +44,7 @@ fi
 cd ~/dotfiles/
 
 #oh-my-zsh download
-git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/oh-my-zsh
+git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
 
 chsh -s /bin/zsh
 #oh-my-zsh setting
