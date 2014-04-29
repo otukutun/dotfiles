@@ -36,6 +36,7 @@ if [ `uname` = "Darwin" ]; then
   fi
   brew bundle
 fi
+
 cd ~/dotfiles/
 
 #oh-my-zsh download
@@ -46,6 +47,9 @@ chsh -s /bin/zsh
 
 #neobundle,tmux,color-theme
 mkdir -p ~/.vim/bundle
+
+#mkdir -p ~/.vim/colors
+#curl -S -o ~/dotfiles/.vim/colors/Tomorrow-Night-Eightie.vim https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim
 
 #vim plugin install
 git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim

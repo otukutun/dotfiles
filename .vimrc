@@ -41,7 +41,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'violetyk/cake.vim'
-NeoBundle 'w0ng/vim-hybrid'
+"NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 
 call neobundle#end()
@@ -72,13 +72,7 @@ filetype plugin indent on
 filetype indent on
 syntax on                      "シンタックス有効化
 
-set background=dark
-if ($ft=='ruby')
-  colorscheme Tomorrow-Night
-else
-  let g:hybrid_use_iTerm_colors = 1
-  colorscheme hybrid
-endif
+colorscheme Tomorrow-Night-Eighties.vim
 
 set backspace=start,eol,indent "backspace有効化
 set whichwrap=b,s,[,],<,>,~    "やじるし有効化
