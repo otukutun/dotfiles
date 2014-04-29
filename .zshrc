@@ -38,6 +38,16 @@ export UPDATE_ZSH_DAYS=13
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+#---------------------------------------
+## Histrory Setting
+##---------------------------------------
+HISTFILE=~/.zsh_history     # Histroy File
+HISTSIZE=100000      
+SAVEHIST=100000
+setopt hist_no_store        # history command no store
+setopt hist_ignore_dups     # ignore duplication command history list
+setopt share_history        # share command history data
+setopt inc_append_history   # as soon as append history
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -66,6 +76,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='mvim'
 fi
+
+#Alias
+alias vi='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
