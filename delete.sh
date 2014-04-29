@@ -2,9 +2,9 @@ rm ~/.git-prompt.sh
 rm ~/.git-completion.bash
 rm ~/.bashrc
 rm ~/.zshrc
-rm ~/.oh-my-zshrc
+rm -rf ~/.oh-my-zsh
 rm ~/.vimrc
-rm ~/.vim
+rm -rf ~/.vim
 rm ~/.gitignore
 rm ~/.gitconfig
 rm ~/Brewfile
