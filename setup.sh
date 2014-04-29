@@ -14,7 +14,6 @@ curl -S -o ~/dotfiles/.vim/colors/jellybeans.vim https://raw.githubusercontent.c
 #bash or zsh simlink
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 
 #bash'sgit config simlink
 ln -sf ~/dotfiles/git-prompt.sh ~/.git-prompt.sh
@@ -46,6 +45,7 @@ cd ~/dotfiles/
 #oh-my-zsh download
 git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
 
+ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 chsh -s /bin/zsh
 #oh-my-zsh setting
 #curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/dotfiles/zsh sh
