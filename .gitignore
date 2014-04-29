@@ -2,5 +2,5 @@
 .init.vimrc
 .local.vimrc
 .vim/bundle/*
-oh-my-zsh
+.oh-my-zsh
 .vim/bundle/neobundle.vim
