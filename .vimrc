@@ -23,6 +23,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+let g:make = 'gmake'
+if system('uname -o') =~ '^GNU/'
+        let g:make = 'make'
+endif
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
@@ -72,7 +76,7 @@ filetype plugin indent on
 filetype indent on
 syntax on                      "シンタックス有効化
 
-colorscheme Tomorrow-Night-Eighties.vim
+colorscheme Tomorrow-Night-Eighties
 
 set backspace=start,eol,indent "backspace有効化
 set whichwrap=b,s,[,],<,>,~    "やじるし有効化
