@@ -7,4 +7,4 @@ rm ~/.vim
 rm ~/.gitignore
 rm ~/.gitconfig
 rm ~/Brewfile
-#rm -rf dotfiles
+rm -rf ~/dotfiles
