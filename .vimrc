@@ -78,6 +78,7 @@ syntax on                      "シンタックス有効化
 
 colorscheme Tomorrow-Night-Eighties
 
+set noswapfile                 "swapファイルを無効化
 set backspace=start,eol,indent "backspace有効化
 set whichwrap=b,s,[,],<,>,~    "やじるし有効化
 set mouse=                     "マウス無効化
