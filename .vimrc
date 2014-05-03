@@ -34,6 +34,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'basyura/unite-rails'
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jpalardy/vim-slime'
