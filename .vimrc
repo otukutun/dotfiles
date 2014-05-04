@@ -79,13 +79,42 @@ syntax on                      "シンタックス有効化
 
 colorscheme Tomorrow-Night-Eighties
 
-set noswapfile                 "swapファイルを無効化
+set noswapfile
 set backspace=start,eol,indent "backspace有効化
 set whichwrap=b,s,[,],<,>,~    "やじるし有効化
 set mouse=                     "マウス無効化
 set nohlsearch                 "検索時のハイライト無効化
 set laststatus=2               "status行を２行に
-set showtabline=2
+set paste                      "コピペ時にずれる現象対策
+
+" Anywhere SID.
+function! s:SID_PREFIX()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+  endfunction
+
+" Set tabline.
+function! s:my_tabline()  "{{{
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+  let bufnrs = tabpagebuflist(i)
+  let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+  let no = i  " display 0-origin tabpagenr.
+  let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+  let title = fnamemodify(bufname(bufnr), ':t')
+  let title = '[' . title . ']'
+  let s .= '%'.i.'T'
+  let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+  let s .= no . ':' . title
+  let s .= mod
+  let s .= '%#TabLineFill# '
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+  return s
+endfunction "}}}
+let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
+
+set showtabline=2              "tablineを2行に
+
 set statusline=%F%r%h%=         "ファイル位置を表示
 
 "黒の場合の色設定
