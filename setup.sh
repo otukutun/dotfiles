@@ -45,6 +45,10 @@ git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
 ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 chsh -s /bin/zsh
 
+#z.sh download
+git clone git@github.com:rupa/z.git ~/dotfiles/z
+ln -sf ~/dotfiles/z ~/z
+
 #neobundle,tmux,color-theme
 mkdir -p ~/.vim/bundle
 
