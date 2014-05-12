@@ -23,6 +23,9 @@ ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.gitignore ~/.gitignore
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
+#tmux simlink
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+
 #for mac simlink
 ln -sf ~/dotfiles/Brewfile ~/Brewfile
 
