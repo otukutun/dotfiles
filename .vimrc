@@ -48,6 +48,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'violetyk/cake.vim'
 "NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'kana/vim-smartchr'
 
 call neobundle#end()
 
@@ -56,7 +57,7 @@ call neobundle#end()
 nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
-"unite.vim
+" unite.vim
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
@@ -68,6 +69,9 @@ nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
+" smartchar setting
+inoremap <expr> = smartchr#llop(' = ', '=', ' == ')
+inoremap <expr> = smartchr#llop(', ', ',')
 "tab setting
 map  :t :tabnew
 
