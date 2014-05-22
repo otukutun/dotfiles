@@ -97,7 +97,7 @@ set whichwrap=b,s,[,],<,>,~    "やじるし有効化
 set mouse=                     "マウス無効化
 set nohlsearch                 "検索時のハイライト無効化
 set laststatus=2               "status行を２行に
-set paste                      "コピペ時にずれる現象対策
+"set paste                      "コピペ時にずれる現象対策 これを設定していると、inoremapがうまく動作しない
 
 " Anywhere SID.
 function! s:SID_PREFIX()
