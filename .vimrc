@@ -70,8 +70,8 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 " smartchar setting
-inoremap <buffer><expr> = smartchr#loop(' = ', ' == ', '=')
-inoremap <buffer><expr> , smartchr#loop(', ', ',')
+inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
+inoremap <buffer><expr> , smartchr#one_of(', ', ',')
 
 " 括弧や引用符入力時に戻る
 inoremap {} {}<LEFT>
