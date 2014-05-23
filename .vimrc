@@ -73,6 +73,10 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
 inoremap <buffer><expr> , smartchr#one_of(', ', ',')
 
+" paste切り替え
+nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
+autocmd InsertLeave * set nopaste
+
 " 括弧や引用符入力時に戻る
 inoremap {} {}<LEFT>
 inoremap [] []<LEFT>
