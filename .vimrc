@@ -52,8 +52,8 @@ NeoBundle 'kana/vim-smartchr'
 
 call neobundle#end()
 
-"Unite setting
-""prefix
+" Unite setting
+"" prefix
 nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
@@ -86,6 +86,14 @@ inoremap '' ''<LEFT>
 inoremap <> <><LEFT>
 "tab setting
 map  :t :tabnew
+
+" syntastic setting
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_echo_current_error = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_enable_highlighting = 1
+
 
 " Required:
 filetype plugin indent on
