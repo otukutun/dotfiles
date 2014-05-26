@@ -106,7 +106,7 @@ set laststatus=2               "status行を２行に
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
-  endfunction
+endfunction
 
 " Set tabline.
 function! s:my_tabline()  "{{{
