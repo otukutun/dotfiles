@@ -78,12 +78,12 @@ nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
 autocmd InsertLeave * set nopaste
 
 " 括弧や引用符入力時に戻る
-inoremap {} {}<LEFT>
-inoremap [] []<LEFT>
-inoremap () ()<LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
-inoremap <> <><LEFT>
+"inoremap {} {}<LEFT>
+"inoremap [] []<LEFT>
+"inoremap () ()<LEFT>
+"inoremap "" ""<LEFT>
+"inoremap '' ''<LEFT>
+"inoremap <> <><LEFT>
 "tab setting
 map  :t :tabnew
 
