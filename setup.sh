@@ -10,6 +10,7 @@ curl -S -o ~/dotfiles/git-completion.bash https://raw.github.com/git/git/master/
 #bash or zsh simlink
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zshenv ~/.zshenv
 
 #bash'sgit config simlink
 ln -sf ~/dotfiles/git-prompt.sh ~/.git-prompt.sh
@@ -22,6 +23,9 @@ ln -sf ~/dotfiles/.vim ~/.vim
 #git simlink
 ln -sf ~/dotfiles/.gitignore ~/.gitignore
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+
+#tmux simlink
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 #for mac simlink
 ln -sf ~/dotfiles/Brewfile ~/Brewfile

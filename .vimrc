@@ -48,15 +48,16 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'violetyk/cake.vim'
 "NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'kana/vim-smartchr'
 
 call neobundle#end()
 
-"Unite setting
-""prefix
+" Unite setting
+"" prefix
 nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
-"unite.vim
+" unite.vim
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
@@ -68,8 +69,31 @@ nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
+" smartchar setting
+inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
+inoremap <buffer><expr> , smartchr#one_of(', ', ',')
+
+" paste切り替え
+nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
+autocmd InsertLeave * set nopaste
+
+" 括弧や引用符入力時に戻る
+"inoremap {} {}<LEFT>
+"inoremap [] []<LEFT>
+"inoremap () ()<LEFT>
+"inoremap "" ""<LEFT>
+"inoremap '' ''<LEFT>
+"inoremap <> <><LEFT>
 "tab setting
 map  :t :tabnew
+
+" syntastic setting
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_echo_current_error = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_enable_highlighting = 1
+
 
 " Required:
 filetype plugin indent on
@@ -85,12 +109,12 @@ set whichwrap=b,s,[,],<,>,~    "やじるし有効化
 set mouse=                     "マウス無効化
 set nohlsearch                 "検索時のハイライト無効化
 set laststatus=2               "status行を２行に
-set paste                      "コピペ時にずれる現象対策
+"set paste                      "コピペ時にずれる現象対策 これを設定していると、inoremapがうまく動作しない
 
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
-  endfunction
+endfunction
 
 " Set tabline.
 function! s:my_tabline()  "{{{
