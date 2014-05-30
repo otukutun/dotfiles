@@ -70,6 +70,11 @@ source $HOME/z/z.sh
 
 # zaw install
 source $HOME/zaw/zaw.zsh
+zstyle ':filter-select' case-insentive yes
+bindkey '^xb' zaw-cdr
+bindkey '^x^b' zaw-git-recent-branches
+bindkey '^x^f' zaw-git-files
+bindkey '^x^r' zaw-history
 
 # User configuration
 
