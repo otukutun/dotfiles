@@ -69,7 +69,7 @@ source $HOME/z/z.sh
 _Z_CMD=j
 
 # zaw install
-source $HOME/zaw/zaw.sh
+source $HOME/zaw/zaw.zsh
 
 # User configuration
 
