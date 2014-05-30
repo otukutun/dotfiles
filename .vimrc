@@ -70,8 +70,8 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 " smartchar setting
-inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
-inoremap <buffer><expr> , smartchr#one_of(', ', ',')
+inoremap <buffer><expr> = smartchr#loop(' = ', ' == ', ' =', '=')
+inoremap <buffer><expr> , smartchr#loop(', ', ',')
 
 " paste切り替え
 nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
