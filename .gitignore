@@ -3,4 +3,6 @@
 .local.vimrc
 .vim/bundle/*
 .oh-my-zsh
+z
+zaw
 .vim/bundle/neobundle.vim
