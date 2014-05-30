@@ -64,9 +64,13 @@ plugins=(git ruby osx bundler brew rails emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
 
-#z.sh Install
+# z.sh install
 source $HOME/z/z.sh
 _Z_CMD=j
+
+# zaw install
+source $HOME/zaw/zaw.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

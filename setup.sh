@@ -49,6 +49,10 @@ chsh -s /bin/zsh
 git clone git@github.com:rupa/z.git ~/dotfiles/z
 ln -sf ~/dotfiles/z ~/z
 
+#zaw download
+git clone git://github.com/zsh-users/zaw.git ~/dotfiles/zaw
+ln -sf ~/dotfiles/zaw ~/zaw
+
 #neobundle,tmux,color-theme
 mkdir -p ~/.vim/bundle
 
