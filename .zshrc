@@ -69,12 +69,20 @@ _Z_CMD=j
 source $HOME/z/z.sh
 
 # zaw install
-source $HOME/zaw/zaw.zsh
+# (zaw準備)cdrを有効化
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 5000
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':completion:*' recent-dirs-insert both
 zstyle ':filter-select' case-insentive yes
+
 bindkey '^xb' zaw-cdr
 bindkey '^x^b' zaw-git-recent-branches
 bindkey '^x^f' zaw-git-files
 bindkey '^x^r' zaw-history
+
+source $HOME/zaw/zaw.zsh
 
 # User configuration
 
@@ -84,9 +92,9 @@ bindkey '^x^r' zaw-history
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+        export EDITOR='vim'
 else
-  export EDITOR='mvim'
+        export EDITOR='mvim'
 fi
 
 #Alias
