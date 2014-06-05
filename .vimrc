@@ -61,9 +61,12 @@ nmap    <Space>u [unite]
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
-nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
+nnoremap <silent> [unite]f   :<C-u>Unite file_rec<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
+
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
 
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
