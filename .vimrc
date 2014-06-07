@@ -58,13 +58,15 @@ nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
 " unite.vim
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
-nnoremap <silent> [unite]f   :<C-u>Unite file_rec<CR>
+nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 
+let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
