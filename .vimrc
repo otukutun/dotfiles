@@ -1,6 +1,6 @@
 if has('vim_starting')
 set nocompatible               "vi互換解除
-
+,
 " Required:
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -85,8 +85,8 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 " smartchar setting
-inoremap <buffer><expr> = smartchr#loop(' = ', ' == ', ' =', '=')
-inoremap <buffer><expr> , smartchr#loop(', ', ',')
+inoremap <expr> = smartchr#loop(' = ', ' == ', ' =', '=')
+inoremap <expr> , smartchr#loop(', ', ',')
 
 " paste切り替え
 "nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
