@@ -71,12 +71,13 @@ nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
-let g:unite_source_grep_command = 'ag'
+"let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opt = '--nocolor --nogroup'
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_max_candiates = 200
 
 " unite-grepのキーマップ。選択した文字列をunite-grep
+"vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
 vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
 
 " ESCキーを2回押すと終了する
