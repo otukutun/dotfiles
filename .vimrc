@@ -27,7 +27,8 @@ let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
 endif
-NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
+
+NeoBundle 'Shougo/vimproc.vim', {'build': {'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }}
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -66,7 +67,7 @@ nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 
-let g:unite_enable_start_insert = 1
+"let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
@@ -76,7 +77,7 @@ let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_max_candiates = 200
 
 " unite-grepのキーマップ。選択した文字列をunite-grep
-vnoremap /g y:Unite grep::-iHRn:<C-R> = rscap(@", '\\.*$^[]')<CR><CR>
+vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
 
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
