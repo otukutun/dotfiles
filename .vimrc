@@ -50,8 +50,14 @@ NeoBundle 'violetyk/cake.vim'
 "NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'kana/vim-smartchr'
+NeoBundle 'tpope/vim-endwise' "rubyでend勝手に入力してくれるやつ
+NeoBundle 'tpope/vim-fugitive' "Gitを便利に使うやつ
+NeoBundle 'nathanaelkane/vim-indent-guides' "インデントに色を付けて見やすくする
 
 call neobundle#end()
+
+" vim-indent-guidesのsetting
+let g:indent_guides_enable_on_vim_startup = 1
 
 " Unite setting
 "" prefix
