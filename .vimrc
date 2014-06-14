@@ -23,12 +23,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-let g:make = 'gmake'
-if system('uname -o') =~ '^GNU/'
-        let g:make = 'make'
-endif
 
-NeoBundle 'Shougo/vimproc.vim', {'build': {'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }}
+NeoBundle 'Shougo/vimproc.vim', {'build' : {'mac' : 'make -f make_mac.mak','unix' : 'make -f make_unix.mak',},}
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -36,13 +32,12 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'basyura/unite-rails'
+NeoBundle 'h1mesuke/unite-outline'
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
-"NeoBundle 'tpope/vim-endwise.git'
 "NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'thinca/vim-quickrun'
@@ -70,8 +65,9 @@ nmap    <Space>u [unite]
 "call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
+"nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
+"nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 
@@ -82,10 +78,19 @@ let g:unite_split_rule  =  'botright' "display unite bottom
 let g:unite_winheight = 10
 
 let g:unite_source_rec_max_cache_files = 3000 "file_recでcacheするmax files
-"let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opt = '--nocolor --nogroup'
-let g:unite_source_grep_recursive_opt = ''
-let g:unite_source_grep_max_candiates = 200
+
+if executable('ag')
+  let g:unite_source_grep_command  =  'ag'
+  let g:unite_source_grep_default_opts  = 
+  \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
+  \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+  let g:unite_source_grep_recursive_opt  =  ''
+endif
+
+
+"let g:unite_source_grep_default_opt = '--nocolor --nogroup'
+"let g:unite_source_grep_recursive_opt = ''
+"let g:unite_source_grep_max_candiates = 200
 
 " unite-grepのキーマップ。選択した文字列をunite-grep
 "vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
