@@ -67,14 +67,17 @@ nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 "nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
-"nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 
 "let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
-let g:unite_split_rule  =  'botright' "display unite bottom
+
+call unite#custom#profile('default',  'context',  {
+\   'winheight': 10,
+\   'direction': 'botright',
+\ })
 let g:unite_winheight = 10
 
 let g:unite_source_rec_max_cache_files = 3000 "file_recでcacheするmax files
@@ -87,14 +90,13 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt  =  ''
 endif
 
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 
-"let g:unite_source_grep_default_opt = '--nocolor --nogroup'
-"let g:unite_source_grep_recursive_opt = ''
-"let g:unite_source_grep_max_candiates = 200
-
-" unite-grepのキーマップ。選択した文字列をunite-grep
-"vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
-vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
+" grep検索結果の再呼出
+nnoremap <silent> , r  :<C-u>UniteResume search-buffer<CR>
 
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
