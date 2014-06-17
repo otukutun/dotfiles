@@ -59,15 +59,17 @@ call neobundle#end()
 "hi IndentGuidesOdd  ctermbg = black
 "hi IndentGuidesEven ctermbg = darkgrey
 
-" Unite setting
+"""""""""""""" Unite setting"""""""""""""""""""""""""""""""""""""""""""""""
 "" prefix
 nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
 " unite.vim
 "call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
+"nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]c   :<C-u>Unite -start-insert cake_controller cake_model cake_config cake_component cake_behavior cake_helper cake_shell cake_fixture cake_core cake_lib<CR>
+nnoremap <silent> [unite]d   :<C-u>UniteWithBufferDir -buffer-name=files file -start-insert<CR>
 "nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
@@ -105,7 +107,11 @@ nnoremap <silent> , r  :<C-u>UniteResume search-buffer<CR>
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
-"vimfiler
+""""""cake.vim setting""""""
+
+let g:cakephp_enable_auto_mode = 1
+
+"""""vimfiler setting"""""""""""""
 let g:vimfiler_as_default_explorer = 1
 
 " smartchar setting
