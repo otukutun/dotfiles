@@ -30,10 +30,13 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'VimClojure'
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'ujihisa/unite-colorscheme'
 
+NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
@@ -80,7 +83,7 @@ call unite#custom#profile('default',  'context',  {
 \ })
 let g:unite_winheight = 10
 
-let g:unite_source_rec_max_cache_files = 3000 "file_recでcacheするmax files
+let g:unite_source_rec_max_cache_files = 25500 "file_recでcacheするmax files
 
 if executable('ag')
   let g:unite_source_grep_command  =  'ag'
@@ -102,9 +105,12 @@ nnoremap <silent> , r  :<C-u>UniteResume search-buffer<CR>
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
+"vimfiler
+let g:vimfiler_as_default_explorer = 1
+
 " smartchar setting
-inoremap <expr> = smartchr#loop(' = ', ' == ', ' =', '=')
-inoremap <expr> , smartchr#loop(', ', ',')
+inoremap <expr> = smartchr#loop('=', ' = ', ' == ', ' =')
+inoremap <expr> , smartchr#loop(',', ', ')
 
 " paste切り替え
 "nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
