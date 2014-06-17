@@ -14,7 +14,7 @@ nnoremap <Space>.  :<C-u>edit $MYVIMRC<CR>
 " source ~/.vimrc を実行する。
 nnoremap <Space>,  :<C-u>source $MYVIMRC<CR>
 
-nnoremap <silent><Space>j    :Explore<CR>
+nnoremap <silent><Space>j    :VimFilerExplorer -find<CR>
 
  " Let NeoBundle manage NeoBundle
 " Required:
@@ -190,11 +190,11 @@ set showtabline=2              "tablineを2行に
 set statusline=%F%r%h%=         "ファイル位置を表示
 
 "黒の場合の色設定
-highlight StatusLine ctermfg=black ctermbg=grey
-highlight CursorLine ctermfg=none ctermbg=darkgray cterm=none
-highlight MatchParen ctermfg=none ctermbg=darkgray
-highlight Comment ctermfg=DarkGreen ctermbg=NONE
-highlight Directory ctermfg=DarkGreen ctermbg=NONE
+"highlight StatusLine ctermfg=black ctermbg=grey
+"highlight CursorLine ctermfg=none ctermbg=darkgray cterm=none
+"highlight MatchParen ctermfg=none ctermbg=darkgray
+"highlight Comment ctermfg=DarkGreen ctermbg=NONE
+"highlight Directory ctermfg=DarkGreen ctermbg=NONE
 "色設定終わり
 
 set number
