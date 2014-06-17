@@ -31,6 +31,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'VimClojure'
 
+"unite install
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'h1mesuke/unite-outline'
@@ -149,7 +150,10 @@ filetype plugin indent on
 filetype indent on
 syntax on                      "シンタックス有効化
 
-colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow
+"colorscheme Tomorrow-Night-Blue
 
 set noswapfile
 set backspace=start,eol,indent "backspace有効化
