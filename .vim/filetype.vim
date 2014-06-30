@@ -12,5 +12,4 @@ augroup filetypedetect
         au BufRead,BufNewFile *.less set filetype=css
         au BufRead,BufNewFile *.coffee set filetype=coffee
         "au BufNewFile,BufReadPost *.coffee set| shiftwidth=2 expandtab
-        au BufRead,BufNewFile *.html set filetype=html
 augroup END
