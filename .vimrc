@@ -76,6 +76,15 @@ nnoremap <silent> [unite]d   :<C-u>UniteWithBufferDir -buffer-name=files file -s
 nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
+nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
+
+" horizontal split
+au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+
+" vertical split
+au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 
 "let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1
