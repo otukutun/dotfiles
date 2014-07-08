@@ -134,6 +134,11 @@ inoremap <expr> , smartchr#loop(',', ', ')
 "nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
 "autocmd InsertLeave * set nopaste
 
+"""""""""""""" ctrlp setting"""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+
+
 " 括弧や引用符入力時に戻る
 inoremap // // 
 inoremap /* /* 
