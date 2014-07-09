@@ -159,6 +159,13 @@ let g:syntastic_echo_current_error = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_enable_highlighting = 1
 
+" Rename command
+" how to use
+" :Rename newfilename
+" if you want to override strongly, you may use this command
+" :Rename! newfilename
+" source: http:// d.hatena.ne.jp/fuenor/20100115/1263551230
+command! -nargs=1 -bang -bar -complete=file Rename saveas<bang> <args> | call delete(expand('#:p'))
 
 " Required:
 filetype plugin indent on
