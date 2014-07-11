@@ -99,6 +99,7 @@ fi
 
 #Alias
 alias vi='vim'
+alias git='hub'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
