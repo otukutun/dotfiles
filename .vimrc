@@ -72,6 +72,7 @@ nmap    <Space>u [unite]
 "nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]c   :<C-u>Unite -start-insert cake_controller cake_model cake_config cake_component cake_behavior cake_helper cake_shell cake_fixture cake_core cake_lib<CR>
+nnoremap <silent> [unite]r   :<C-u>Unite -start-insert rails/model rails/controller rails/view rails/helper rails/mailer rails/lib rails/db rails/config rails/javascript rails/stylesheet<CR>
 nnoremap <silent> [unite]d   :<C-u>UniteWithBufferDir -buffer-name=files file -start-insert<CR>
 "nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
 nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
