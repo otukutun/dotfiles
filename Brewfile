@@ -9,6 +9,7 @@ install wget
 install tig
 install zsh
 install ag
+install imagemagick
 install ctags
 install hub
 install tmux
