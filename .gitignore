@@ -3,6 +3,7 @@
 .local.vimrc
 .vim/bundle/*
 .oh-my-zsh
+.DS_Store
 z
 zaw
 .vim/bundle/neobundle.vim
