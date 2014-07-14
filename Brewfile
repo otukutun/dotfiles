@@ -10,6 +10,7 @@ install tig
 install zsh
 install ag
 install ctags
+install lynx
 install tmux
 install libevent
 install fontforge
