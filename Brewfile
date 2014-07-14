@@ -9,8 +9,10 @@ install wget
 install tig
 install zsh
 install ag
+install imagemagick
 install ctags
 install lynx
+install hub
 install tmux
 install libevent
 install fontforge
