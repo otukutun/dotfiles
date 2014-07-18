@@ -78,7 +78,7 @@ zstyle ':completion:*' recent-dirs-insert both
 zstyle ':filter-select' case-insentive yes
 
 bindkey '^xb' zaw-cdr
-bindkey '^x^b' zaw-git-recent-branches
+bindkey '^xg' zaw-git-recent-branches
 bindkey '^x^f' zaw-git-files
 bindkey '^x^r' zaw-history
 
