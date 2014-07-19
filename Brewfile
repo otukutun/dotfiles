@@ -11,6 +11,9 @@ install zsh
 install ag
 install imagemagick
 install ctags
+install lynx
+install libxml2
+install libxslt
 install hub
 install tmux
 install libevent
