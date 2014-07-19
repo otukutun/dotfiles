@@ -63,6 +63,8 @@ mkdir -p ~/.vim/bundle
 #tmuxinator install
 gem install tmuxinator
 
+ln -sf ~/dotfiles/.tmuxinator ~/.tmuxinator
+
 #mkdir -p ~/.vim/colors
 #curl -S -o ~/dotfiles/.vim/colors/Tomorrow-Night-Eightie.vim https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim
 
