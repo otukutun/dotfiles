@@ -60,6 +60,9 @@ ln -sf ~/dotfiles/zaw ~/zaw
 #neobundle,tmux,color-theme
 mkdir -p ~/.vim/bundle
 
+#tmuxinator install
+gem install tmuxinator
+
 #mkdir -p ~/.vim/colors
 #curl -S -o ~/dotfiles/.vim/colors/Tomorrow-Night-Eightie.vim https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim
 
