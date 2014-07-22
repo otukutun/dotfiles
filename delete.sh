@@ -12,3 +12,4 @@ rm ~/Brewfile
 rm -rf ~/z
 rm -rf ~/zaw
 rm -rf ~/dotfiles
+rm -rf ~/.tmuxinator
