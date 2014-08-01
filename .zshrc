@@ -84,6 +84,10 @@ bindkey '^x^r' zaw-history
 
 source $HOME/zaw/zaw.zsh
 
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit -u
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
