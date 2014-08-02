@@ -10,6 +10,7 @@ install tig
 install zsh
 install ag
 install imagemagick
+install reattach-to-user-namespace
 install ctags
 install lynx
 install libxml2
