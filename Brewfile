@@ -27,6 +27,8 @@ install vim --HEAD --enable-pythoninterp --with-lua
 install macvim --HEAD --with-lua --enable-pythoninterp --with-lua
 install nodejs
 install memcached
+install rbenv
+install ruby-build
 install packer
 linkapps
 

@@ -62,6 +62,7 @@ mkdir -p ~/.vim/bundle
 
 #tmuxinator install
 gem install tmuxinator
+gem install aws-sdk
 
 ln -sf ~/dotfiles/.tmuxinator ~/.tmuxinator
 
