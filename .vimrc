@@ -104,7 +104,9 @@ call unite#custom#profile('default',  'context',  {
 \ })
 let g:unite_winheight = 10
 
-let g:unite_source_rec_max_cache_files = 25500 "file_recでcacheするmax files
+"let g:unite_source_rec_max_cache_files = 25500 "file_recでcacheするmax files
+
+call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|jpg\|html\)$')
 
 if executable('ag')
   let g:unite_source_grep_command  =  'ag'
