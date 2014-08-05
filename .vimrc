@@ -37,6 +37,8 @@ NeoBundle 'basyura/unite-rails'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'violetyk/cake.vim'
+"powerline tool
+NeoBundle 'itchyny/lightline.vim'
 
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
