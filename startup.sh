@@ -6,3 +6,4 @@ open -a Slack
 open -a iTerm
 open -a Google\ Chrome
 open -a Hoster
+open -a Evernote
