@@ -76,7 +76,7 @@ zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 zstyle ':filter-select' case-insentive yes
-
+#
 bindkey '^xb' zaw-cdr
 bindkey '^xg' zaw-git-recent-branches
 bindkey '^x^f' zaw-git-files
@@ -110,3 +110,34 @@ alias git='hub'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+#
+#
+
+# peco
+#function peco-select-history() {
+#typeset tac
+#if which tac > /dev/null; then
+#        tac=tac
+#else
+#        tac='tail -r'
+#fi
+#BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+#CURSOR=$#BUFFER
+#zle redisplay
+#}
+#zle -N peco-select-history
+#bindkey '^x^r' peco-select-history
+#
+#
+#function peco-cdr () {
+#local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
+#if [ -n "$selected_dir" ]; then
+#        BUFFER="cd ${selected_dir}"
+#        zle accept-line
+#fi
+#zle clear-screen
+#}
+#zle -N peco-cdr
+#bindkey '^xb' peco-cdr
+#
+#alias -g B='`git checkout | git branch | peco | sed -e "s/^\*[ ]*//g"`'

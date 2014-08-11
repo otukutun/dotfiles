@@ -32,5 +32,7 @@ install ruby-build
 install packer
 linkapps
 
+tap peco/peco
+install peco
 # Remove outdated versions
 cleanup
