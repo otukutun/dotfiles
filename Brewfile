@@ -30,9 +30,18 @@ install memcached
 install rbenv
 install ruby-build
 install packer
-linkapps
+install go
 
 tap peco/peco
 install peco
+
+tap homebrew/php
+install php55
+install php55-mcrypt
+install php55-intl
+install composer
+
+linkapps
+
 # Remove outdated versions
 cleanup
