@@ -31,6 +31,7 @@ install rbenv
 install ruby-build
 install packer
 linkapps
+curl-ca-bundle
 
 tap peco/peco
 install peco
