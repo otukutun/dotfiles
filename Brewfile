@@ -32,8 +32,18 @@ install ruby-build
 install packer
 linkapps
 curl-ca-bundle
+install go
 
 tap peco/peco
 install peco
+
+tap homebrew/php
+install php55
+install php55-mcrypt
+install php55-intl
+install composer
+
+linkapps
+
 # Remove outdated versions
 cleanup
