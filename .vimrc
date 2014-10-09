@@ -136,6 +136,7 @@ let g:cakephp_enable_auto_mode = 1
 
 """""vimfiler setting"""""""""""""
 let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_edit_action = 'tabopen'
 
 " smartchar setting
 inoremap <expr> = smartchr#loop('=', ' = ', ' == ', ' =')
