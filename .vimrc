@@ -150,9 +150,43 @@ inoremap <expr> , smartchr#loop(',', ', ')
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 
+"""""""""""""" vim-rails setting"""""""""""""""""""""""""""""""""""""""""""""""
+"------------------------------------
+"" vim-rails
+"------------------------------------
+"""{{{
+"有効化
+let g:rails_default_file='config/database.yml'
+let g:rails_level = 4
+let g:rails_mappings=1
+let g:rails_modelines=0
+" let g:rails_some_option = 1
+let g:rails_statusline = 1
+" let g:rails_subversion=0
+" let g:rails_syntax = 1
+" let g:rails_url='http:// localhost:3000'
+" let g:rails_ctags_arguments='--languages=-javascript'
+" let g:rails_ctags_arguments = ''
+function! SetUpRailsSetting()
+        nnoremap <buffer><Space>r :R<CR>
+        nnoremap <buffer><Space>a :A<CR>
+        nnoremap <buffer><Space>m :Rmodel<Space>
+        nnoremap <buffer><Space>c :Rcontroller<Space>
+        nnoremap <buffer><Space>v :Rview<Space>
+        nnoremap <buffer><Space>p :Rpreview<CR>
+endfunction
+
+aug MyAutoCmd
+        au User Rails call SetUpRailsSetting()
+aug END
+
+aug RailsDictSetting
+        au!
+aug END
+"}}}
 
 " 括弧や引用符入力時に戻る
-inoremap // // 
+"inoremap // // 
 inoremap /* /* 
 inoremap */ */<CR>
 "inoremap {} {}<LEFT>
@@ -200,27 +234,27 @@ set laststatus=2               "status行を２行に
 
 " Anywhere SID.
 function! s:SID_PREFIX()
-  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+        return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
 
 " Set tabline.
 function! s:my_tabline()  "{{{
-  let s = ''
-  for i in range(1, tabpagenr('$'))
-  let bufnrs = tabpagebuflist(i)
-  let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
-  let no = i  " display 0-origin tabpagenr.
-  let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
-  let title = fnamemodify(bufname(bufnr), ':t')
-  let title = '[' . title . ']'
-  let s .= '%'.i.'T'
-  let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
-  let s .= no . ':' . title
-  let s .= mod
-  let s .= '%#TabLineFill# '
-  endfor
-  let s .= '%#TabLineFill#%T%=%#TabLine#'
-  return s
+        let s = ''
+        for i in range(1, tabpagenr('$'))
+                let bufnrs = tabpagebuflist(i)
+                let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+                let no = i  " display 0-origin tabpagenr.
+                let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+                let title = fnamemodify(bufname(bufnr), ':t')
+                let title = '[' . title . ']'
+                let s .= '%'.i.'T'
+                let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+                let s .= no . ':' . title
+                let s .= mod
+                let s .= '%#TabLineFill# '
+        endfor
+        let s .= '%#TabLineFill#%T%=%#TabLine#'
+        return s
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 
