@@ -1,6 +1,6 @@
 if has('vim_starting')
 set nocompatible               "vi互換解除
-,
+
 " Required:
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -53,11 +53,22 @@ NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 "NeoBundle 'w0ng/vim-hybrid'
+
+NeoBundle 'alpaca-tc/alpaca_tags'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'tpope/vim-endwise' "rubyでend勝手に入力してくれるやつ
 NeoBundle 'tpope/vim-fugitive' "Gitを便利に使うやつ
 "NeoBundle 'nathanaelkane/vim-indent-guides' "インデントに色を付けて見やすくする
+augroup AlpacaTags
+  autocmd!
+  if exists(':Tags')
+  autocmd BufWritePost Gemfile TagsBundle
+  autocmd BufEnter * TagsSet
+  " 毎回保存と同時更新する場合はコメントを外す
+  "     " autocmd BufWritePost * TagsUpdate
+  endif
+augroup END
 
 call neobundle#end()
 
@@ -101,9 +112,9 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 call unite#custom#profile('default',  'context',  {
-\   'winheight': 10,
-\   'direction': 'botright',
-\ })
+  \   'winheight': 10,
+  \   'direction': 'botright',
+  \ })
 let g:unite_winheight = 10
 
 "let g:unite_source_rec_max_cache_files = 25500 "file_recでcacheするmax files
@@ -113,8 +124,8 @@ call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|
 if executable('ag')
   let g:unite_source_grep_command  =  'ag'
   let g:unite_source_grep_default_opts  = 
-  \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
-  \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+    \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
+    \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
   let g:unite_source_grep_recursive_opt  =  ''
 endif
 
@@ -141,6 +152,7 @@ let g:vimfiler_edit_action = 'tabopen'
 " smartchar setting
 inoremap <expr> = smartchr#loop('=', ' = ', ' == ', ' =')
 inoremap <expr> , smartchr#loop(',', ', ')
+inoremap <expr> # smartchr#loop('#', '# ')
 
 " paste切り替え
 "nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
@@ -151,9 +163,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 
 """""""""""""" vim-rails setting"""""""""""""""""""""""""""""""""""""""""""""""
-"------------------------------------
-"" vim-rails
-"------------------------------------
 """{{{
 "有効化
 let g:rails_default_file='config/database.yml'
@@ -168,12 +177,12 @@ let g:rails_statusline = 1
 " let g:rails_ctags_arguments='--languages=-javascript'
 " let g:rails_ctags_arguments = ''
 function! SetUpRailsSetting()
-        nnoremap <buffer><Space>r :R<CR>
-        nnoremap <buffer><Space>a :A<CR>
-        nnoremap <buffer><Space>m :Rmodel<Space>
-        nnoremap <buffer><Space>c :Rcontroller<Space>
-        nnoremap <buffer><Space>v :Rview<Space>
-        nnoremap <buffer><Space>p :Rpreview<CR>
+  nnoremap <buffer><Space>r :R<CR>
+  nnoremap <buffer><Space>a :A<CR>
+  nnoremap <buffer><Space>m :Rmodel<Space>
+  nnoremap <buffer><Space>c :Rcontroller<Space>
+  nnoremap <buffer><Space>v :Rview<Space>
+  nnoremap <buffer><Space>p :Rpreview<CR>
 endfunction
 
 aug MyAutoCmd
@@ -239,22 +248,22 @@ endfunction
 
 " Set tabline.
 function! s:my_tabline()  "{{{
-        let s = ''
-        for i in range(1, tabpagenr('$'))
-                let bufnrs = tabpagebuflist(i)
-                let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
-                let no = i  " display 0-origin tabpagenr.
-                let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
-                let title = fnamemodify(bufname(bufnr), ':t')
-                let title = '[' . title . ']'
-                let s .= '%'.i.'T'
-                let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
-                let s .= no . ':' . title
-                let s .= mod
-                let s .= '%#TabLineFill# '
-        endfor
-        let s .= '%#TabLineFill#%T%=%#TabLine#'
-        return s
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+    let bufnrs = tabpagebuflist(i)
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+    let no = i  " display 0-origin tabpagenr.
+    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+    let title = fnamemodify(bufname(bufnr), ':t')
+    let title = '[' . title . ']'
+    let s .= '%'.i.'T'
+    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+    let s .= no . ':' . title
+    let s .= mod
+    let s .= '%#TabLineFill# '
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+  return s
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 
