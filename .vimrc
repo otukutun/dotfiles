@@ -165,6 +165,7 @@ inoremap <expr> = smartchr#loop('=', ' = ', ' == ', ' =')
 inoremap <expr> , smartchr#loop(',', ', ')
 inoremap <expr> # smartchr#loop('#', '# ')
 
+
 " paste切り替え
 "nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
 "autocmd InsertLeave * set nopaste
@@ -296,7 +297,9 @@ set tabstop=2
 set incsearch
 set expandtab
 set list
-set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
+"set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
+" listchars
+set listchars=eol:¶
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
