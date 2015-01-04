@@ -49,6 +49,8 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 setopt inc_append_history   # as soon as append history
 
+
+setopt AUTO_PUSHD # stack cd diretotires
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
