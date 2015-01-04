@@ -104,6 +104,9 @@ else
         export EDITOR='mvim'
 fi
 
+# emacs keybind
+bindkey -e
+
 #Alias
 alias vi='vim'
 alias git='hub'
