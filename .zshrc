@@ -13,6 +13,11 @@ ZSH_THEME="otukutun"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U compinit; compinit
 
+# cdr setting
+autoload -Uz add-zsh-hook
+autoload -Uz chpwd_recent_dirs cdr
+add-zsh-hook chpwd chpwd_recent_dirs
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -75,19 +80,19 @@ source $HOME/z/z.sh
 
 # zaw install
 # (zaw準備)cdrを有効化
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-add-zsh-hook chpwd chpwd_recent_dirs
-zstyle ':chpwd:*' recent-dirs-max 5000
-zstyle ':chpwd:*' recent-dirs-default yes
-zstyle ':completion:*' recent-dirs-insert both
-zstyle ':filter-select' case-insentive yes
-#
-bindkey '^xb' zaw-cdr
-bindkey '^xg' zaw-git-recent-branches
-bindkey '^x^f' zaw-git-files
-bindkey '^x^r' zaw-history
+#autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+#add-zsh-hook chpwd chpwd_recent_dirs
+#zstyle ':chpwd:*' recent-dirs-max 5000
+#zstyle ':chpwd:*' recent-dirs-default yes
+#zstyle ':completion:*' recent-dirs-insert both
+#zstyle ':filter-select' case-insentive yes
+##
+#bindkey '^xb' zaw-cdr
+#bindkey '^xg' zaw-git-recent-branches
+#bindkey '^x^f' zaw-git-files
+#bindkey '^x^r' zaw-history
 
-source $HOME/zaw/zaw.zsh
+#source $HOME/zaw/zaw.zsh
 
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
@@ -111,6 +116,31 @@ bindkey -e
 alias vi='vim'
 alias git='hub'
 
+# peco function
+function peco-history() {
+local item
+item=$(builtin history -n -r 1 | peco --query="$LBUFFER")
+if [[ -z "$item" ]]; then return 1
+fi
+BUFFER="$item"
+CURSOR=$#BUFFER
+}
+
+function peco-cdr() {
+local item
+item=$(cdr -l | sed 's/^[^ ]\{1,\} \{1,\}//' | peco)
+if [[ -z "$item" ]]; then return 1
+fi
+BUFFER="cd -- $item"
+CURSOR=$#BUFFER
+zle accept-line
+}
+
+zle -N peco-history
+bindkey '^x^r' peco-history 
+
+zle -N peco-cdr
+bindkey '^x^b' peco-cdr
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -144,6 +174,6 @@ alias git='hub'
 #zle clear-screen
 #}
 #zle -N peco-cdr
-#bindkey '^xb' peco-cdr
+#bindkey '^x^b' peco-cdr
 #
 #alias -g B='`git checkout | git branch | peco | sed -e "s/^\*[ ]*//g"`'
