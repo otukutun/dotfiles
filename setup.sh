@@ -62,3 +62,8 @@ git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle
 git clone git://github.com/erikw/tmux-powerline ~/dotfiles/.vim/bundle/tmux-powerline
 git clone git://github.com/seebi/dircolors-solarized ~/dotfiles/.vim/bundle/dircolors-solarized
 vim  +NeoBundleInstall +q
+
+# if vimproc says `vimproc's DLL: "~/dotfiles/.vim/bundle/vimproc/autoload/vimproc_mac.so" is not found.  Please read :help vimproc and make it.`
+# you should execute this command.
+# $ cd .vim/bundle/vimproc && make
+# source: http://d.hatena.ne.jp/pospome/20141202/1417494524
