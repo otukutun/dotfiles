@@ -3,18 +3,9 @@
 cd ~
 #mkdir bin swap backup tmp memo tags src .trash .tmux
 
-#bash git prompt and completion
-curl -S -o ~/dotfiles/git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
-curl -S -o ~/dotfiles/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-
-#bash or zsh simlink
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
+#zsh simlink
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.zshenv ~/.zshenv
-
-#bash'sgit config simlink
-ln -sf ~/dotfiles/git-prompt.sh ~/.git-prompt.sh
-ln -sf ~/dotfiles/git-completion.bash ~/.git-completion.bash
 
 #vim simlink
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
