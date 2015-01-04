@@ -146,6 +146,14 @@ CURSOR=$#BUFFER
 zle accept-line
 }
 
+function peco-pkill() {
+for pid in $(ps aux | peco | awk '{ print $2 }')
+do
+        kill -9 $pid
+        echo "Killed ${pid}"
+done
+}
+
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
@@ -155,6 +163,9 @@ bindkey '^x^b' peco-cdr
 zle -N peco-git-branch
 bindkey '^x^g' peco-git-branch
 
+zle -N peco-pkill
+bindkey '^x^p' peco-pkill
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -163,16 +174,3 @@ bindkey '^x^g' peco-git-branch
 #
 #
 
-#
-#function peco-cdr () {
-#local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
-#if [ -n "$selected_dir" ]; then
-#        BUFFER="cd ${selected_dir}"
-#        zle accept-line
-#fi
-#zle clear-screen
-#}
-#zle -N peco-cdr
-#bindkey '^x^b' peco-cdr
-#
-#alias -g B='`git checkout | git branch | peco | sed -e "s/^\*[ ]*//g"`'
