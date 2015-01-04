@@ -78,22 +78,6 @@ source $ZSH/oh-my-zsh.sh
 _Z_CMD=j
 source $HOME/z/z.sh
 
-# zaw install
-# (zaw準備)cdrを有効化
-#autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-#add-zsh-hook chpwd chpwd_recent_dirs
-#zstyle ':chpwd:*' recent-dirs-max 5000
-#zstyle ':chpwd:*' recent-dirs-default yes
-#zstyle ':completion:*' recent-dirs-insert both
-#zstyle ':filter-select' case-insentive yes
-##
-#bindkey '^xb' zaw-cdr
-#bindkey '^xg' zaw-git-recent-branches
-#bindkey '^x^f' zaw-git-files
-#bindkey '^x^r' zaw-history
-
-#source $HOME/zaw/zaw.zsh
-
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
 # User configuration
@@ -165,7 +149,7 @@ zle -N peco-history
 bindkey '^x^r' peco-history 
 
 zle -N peco-cdr
-bindkey '^x^b' peco-cdr
+bindkey '^xb' peco-cdr
 
 zle -N peco-git-branch
 bindkey '^x^g' peco-git-branch
