@@ -116,6 +116,13 @@ bindkey -e
 alias vi='vim'
 alias git='hub'
 
+# git alias
+alias g='git'
+alias gd='git diff'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+
 # peco function
 function peco-history() {
 local item
