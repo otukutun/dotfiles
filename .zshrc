@@ -51,6 +51,9 @@ setopt inc_append_history   # as soon as append history
 
 
 setopt AUTO_PUSHD # stack cd diretotires
+setopt PUSHD_IGNORE_DUPS # don't record multimple history
+autoload -Uz compinit
+compinit
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -88,8 +91,6 @@ source $HOME/zaw/zaw.zsh
 
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
-autoload -U compinit
-compinit -u
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
