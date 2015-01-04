@@ -1,4 +1,4 @@
-PROMPT=' %{$fg[yellow]%}(✿╹◡╹)ﾉ%{$reset_color%} '
+PROMPT=' %{$fg[yellow]%}(✿╹◡╹)ノ%{$reset_color%} '
 RPROMPT='[%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)%{$reset_color%}]'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg_bold[green]%}"
