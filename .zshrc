@@ -136,11 +136,25 @@ CURSOR=$#BUFFER
 zle accept-line
 }
 
+function peco-git-branch() {
+local item
+item=$(git branch | peco | sed -e "s/^\*[ ]*//g")
+if [[ -z "$item" ]]; then return 1
+fi
+BUFFER="git checkout $item"
+CURSOR=$#BUFFER
+zle accept-line
+}
+
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
 zle -N peco-cdr
 bindkey '^x^b' peco-cdr
+
+zle -N peco-git-branch
+bindkey '^x^g' peco-git-branch
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -149,21 +163,6 @@ bindkey '^x^b' peco-cdr
 #
 #
 
-# peco
-#function peco-select-history() {
-#typeset tac
-#if which tac > /dev/null; then
-#        tac=tac
-#else
-#        tac='tail -r'
-#fi
-#BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
-#CURSOR=$#BUFFER
-#zle redisplay
-#}
-#zle -N peco-select-history
-#bindkey '^x^r' peco-select-history
-#
 #
 #function peco-cdr () {
 #local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
