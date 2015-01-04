@@ -23,8 +23,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-
-NeoBundle 'Shougo/vimproc.vim', {'build' : {'mac' : 'make -f make_mac.mak','unix' : 'make -f make_unix.mak',},}
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \   'mac' : 'make -f make_mac.mak',
+      \   'unix' : 'make -f make_unix.mak',
+      \ },
+      \}
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
