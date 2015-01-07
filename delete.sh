@@ -1,5 +1,3 @@
-rm ~/.git-prompt.sh
-rm ~/.git-completion.bash
 rm ~/.bashrc
 rm ~/.zshrc
 rm -rf ~/.oh-my-zsh
