@@ -145,6 +145,9 @@ do
 done
 }
 
+# easily git add
+alias pgitadd="git status -s | sed -e '/^[^ |\?]/d' | peco --prompt='[git add]' | awk '{print \$2}' | xargs git add"
+
 zle -N peco-history
 bindkey '^x^r' peco-history 
 

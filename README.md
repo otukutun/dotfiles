@@ -1,7 +1,9 @@
-# @otukutunのdotfiles
+# dotfiles
 
 This repository is setting about zsh and vim , bash.
 I'll add this to some other setting little by little.
+
+## Abstract
 
 ## How to set up
 
