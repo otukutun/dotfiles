@@ -58,6 +58,9 @@ ln -sf ~/dotfiles/.tmuxinator ~/.tmuxinator
 # peco setting
 ln -sf ~/dotfiles/.peco ~/.peco
 
+# gemrc setting
+ln -sf ~/dotfiles/.gemrc ~/.gemrc
+
 #mkdir -p ~/.vim/colors
 #curl -S -o ~/dotfiles/.vim/colors/Tomorrow-Night-Eightie.vim https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim
 
