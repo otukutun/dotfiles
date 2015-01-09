@@ -3,7 +3,6 @@
                 "C-n": "peco.SelectPrevious",
                 "C-p": "peco.SelectNext",
                 "C-s": "peco.ToggleSelectionAndSelectNext",
-                "C-g": "peco.Cancel",
-                "C-v": "peco.SelectNextPage"
+                "C-c": "peco.Cancel"
         }
 }
