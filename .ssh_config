@@ -1,0 +1,6 @@
+Host *
+  ForwardAgent yes
+  TCPKeepAlive yes
+  ServerAliveInterval 60
+  AddressFamily inet
+  Compression yes
