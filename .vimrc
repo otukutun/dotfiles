@@ -232,6 +232,13 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_echo_current_error = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_enable_highlighting = 1
+" --------------------------------
+"  " rubocop
+"  " --------------------------------
+"  " syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
+"  " active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
 
 " Rename command
 " how to use
