@@ -47,6 +47,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jpalardy/vim-slime'
+" 静的解析
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'edsono/vim-matchit'
@@ -55,7 +56,9 @@ NeoBundle 'kchmck/vim-coffee-script'
 "NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'thinca/vim-quickrun'
+" ドキュメント参照
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'yuku-t/vim-ref-ri'
 "NeoBundle 'w0ng/vim-hybrid'
 
 NeoBundleLazy 'alpaca-tc/alpaca_tags', {

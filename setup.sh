@@ -52,6 +52,8 @@ mkdir -p ~/.vim/bundle
 gem install tmuxinator
 gem install aws-sdk
 gem install ec2ssh
+gem install rubocop
+gem install refe2
 
 ln -sf ~/dotfiles/.tmuxinator ~/.tmuxinator
 
