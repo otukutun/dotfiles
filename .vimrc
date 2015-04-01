@@ -101,6 +101,13 @@ nnoremap [unite] <Nop>
 nmap    <Space>u [unite]
 
 " unite.vim
+function! DispatchUniteFileRecAsyncOrGit()
+  if isdirectory(getcwd()."/.git")
+    Unite file_rec/git
+  else
+    Unite file_rec/async
+  endif
+endfunction
 "call unite#filters#matcher_default#use(['matcher_fuzzy'])
 "nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
@@ -108,7 +115,8 @@ nnoremap <silent> [unite]c   :<C-u>Unite -start-insert cake_controller cake_mode
 nnoremap <silent> [unite]r   :<C-u>Unite -start-insert rails/model rails/controller rails/view rails/helper rails/mailer rails/lib rails/db rails/config rails/javascript rails/stylesheet<CR>
 nnoremap <silent> [unite]d   :<C-u>UniteWithBufferDir -buffer-name=files file -start-insert<CR>
 "nnoremap <silent> [unite]f   :<C-u>Unite file -default-action=tabopen<CR>
-nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
+nnoremap <silent> [unite]f :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
+"nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
