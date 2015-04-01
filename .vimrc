@@ -77,6 +77,9 @@ NeoBundle 'kana/vim-smartchr'
 NeoBundle 'tpope/vim-endwise' "rubyでend勝手に入力してくれるやつ
 NeoBundle 'tpope/vim-fugitive' "Gitを便利に使うやつ
 "NeoBundle 'nathanaelkane/vim-indent-guides' "インデントに色を付けて見やすくする
+"
+"
+let g:ref_phpmanual_path = $HOME . '/.vim/manuals/php-chunked-xhtml'
 
 augroup AlpacaTags
   autocmd!
