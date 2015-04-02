@@ -136,7 +136,7 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
 au FileType unite inoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
 
-"let g:unite_enable_start_insert = 1
+let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
