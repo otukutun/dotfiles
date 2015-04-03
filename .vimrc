@@ -38,7 +38,7 @@ NeoBundle 'VimClojure'
 "unite install
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'basyura/unite-rails'
-NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'violetyk/cake.vim'
 "powerline tool
@@ -122,7 +122,7 @@ nnoremap <silent> [unite]f :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 "nnoremap <silent> [unite]f   :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
-nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
+nnoremap <silent> [unite]o   :<C-u>Unite -vertical -winwidth=40 outline<CR>
 
 " horizontal split
 au FileType unite nnoremap <silent> <buffer> <expr> <C-h> unite#do_action('split')
