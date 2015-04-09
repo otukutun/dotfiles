@@ -148,6 +148,9 @@ done
 # easily git add
 alias pgitadd="git status -s | sed -e '/^[^ |\?]/d' | peco --prompt='[git add]' | awk '{print \$2}' | xargs git add"
 
+# easily ssh using peco.
+alias pssh="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
+
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
