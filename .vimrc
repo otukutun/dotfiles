@@ -326,7 +326,6 @@ set expandtab
 set list
 "set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 " listchars
-set listchars=eol:¶
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
