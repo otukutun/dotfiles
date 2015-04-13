@@ -1,3 +1,4 @@
+set encoding=utf-8
 if has('vim_starting')
 set nocompatible               "vi互換解除
 
