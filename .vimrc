@@ -27,6 +27,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \   'mac' : 'make -f make_mac.mak',
       \   'unix' : 'make -f make_unix.mak',
+      \   'linux' : 'make',
       \ },
       \}
 NeoBundle 'tpope/vim-fugitive'
