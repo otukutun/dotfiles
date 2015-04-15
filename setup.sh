@@ -16,8 +16,11 @@ ln -sf ~/dotfiles/.gitignore ~/.gitignore
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 #tmux simlink
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-
+if [ `uname` = "Darwin" ]; then
+  ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+else
+  ln -sf ~/dotfiles/.ubuntu_tmux.conf ~/.tmux.conf
+fi
 #for mac simlink
 ln -sf ~/dotfiles/Brewfile ~/Brewfile
 
