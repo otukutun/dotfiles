@@ -78,8 +78,10 @@ source $ZSH/oh-my-zsh.sh
 _Z_CMD=j
 source $HOME/z/z.sh
 
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-
+# Mac
+if [ `uname` = "Darwin" ]; then
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
