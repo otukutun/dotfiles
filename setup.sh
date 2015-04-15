@@ -38,7 +38,7 @@ cd ~/dotfiles/
 git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
 
 ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
-cp -f ~/dotfiles/{original-zsh/themes/otukutun.zsh-theme,.oh-my-zsh/themes/otukutun.zsh-theme}
+cp -f original-zsh/themes/otukutun.zsh-theme ~/dotfiles/.oh-my-zsh/themes/otukutun.zsh-theme
 chsh -s /bin/zsh
 
 #z.sh download
