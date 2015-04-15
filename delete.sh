@@ -1,12 +1,8 @@
-rm ~/.bashrc
-rm ~/.zshrc
-rm -rf ~/.oh-my-zsh
-rm ~/.vimrc
-rm ~/.tmux.conf
-rm -rf ~/.vim
-rm ~/.gitignore
-rm ~/.gitconfig
-rm ~/Brewfile
-rm -rf ~/z
-rm -rf ~/dotfiles
-rm -rf ~/.tmuxinator
+FILES=(.bashrc .zshrc .oh-my-zsh .vimrc .tmux.conf .vim .gitignore .gitconfig Brewfile z .tmuxinator dotfiles) 
+
+for file in ${FILES[@]}; do
+  if [ -e $file ]; then
+    echo "~/$file"
+    rm -rf "~/$file"
+  fi
+done
