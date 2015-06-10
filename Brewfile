@@ -29,6 +29,7 @@ install nodejs
 install memcached
 install rbenv
 install ruby-build
+install rbenv-default-gems
 install packer
 linkapps
 curl-ca-bundle
