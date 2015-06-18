@@ -49,6 +49,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'slim-template/vim-slim'
 " 静的解析
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-rails'
