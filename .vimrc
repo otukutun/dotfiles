@@ -32,7 +32,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \ },
       \}
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'VimClojure'
@@ -190,10 +189,6 @@ inoremap <expr> # smartchr#loop('#', '# ')
 " paste切り替え
 "nnoremap <silent><space>pa :set paste<CR>:startinsert<CR>
 "autocmd InsertLeave * set nopaste
-
-"""""""""""""" ctrlp setting"""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 
 """""""""""""" vim-rails setting"""""""""""""""""""""""""""""""""""""""""""""""
 """{{{
