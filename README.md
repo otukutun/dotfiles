@@ -5,6 +5,10 @@ I'll add this to some other setting little by little.
 
 ## Abstract
 
+## Requirement
+- os x developer tool
+- SSH key
+
 ## How to set up
 
 ```
