@@ -28,7 +28,7 @@ ln -sf ~/dotfiles/Brewfile ~/Brewfile
 if [ `uname` = "Darwin" ]; then
   if [ -z `which brew` ]; then
     # home brew
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     # php
     curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
   fi
