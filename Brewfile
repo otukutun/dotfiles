@@ -1,50 +1,77 @@
-# Tap Formula
-tap homebrew/binary
-
-# Make sure using latest Homebrew
-update
-
-# Packages
-install wget
-install tig
-install zsh
-install ag
-install imagemagick
-install reattach-to-user-namespace
-install ctags
-install lynx
-install libxml2
-install libxslt
-install hub
-install tmux
-install libevent
-install fontforge
-install coreutils
-install bash-completion
-install openssl
-install source-highlight
-install vim --HEAD --enable-pythoninterp --with-lua
-install macvim --HEAD --with-lua --enable-pythoninterp --with-lua
-install nodejs
-install memcached
-install rbenv
-install ruby-build
-install rbenv-default-gems
-install packer
-linkapps
-curl-ca-bundle
-install go
-
-tap peco/peco
-install peco
-
-tap homebrew/php
-install php55
-install php55-mcrypt
-install php55-intl
-install composer
-
-linkapps
-
-# Remove outdated versions
-cleanup
+tap 'homebrew/binary'
+tap 'homebrew/bundle'
+tap 'homebrew/versions'
+tap 'peco/peco'
+tap 'sanemat/font'
+brew 'autoconf'
+brew 'xz'
+brew 'automake'
+brew 'crf++'
+brew 'mecab'
+brew 'mecab-ipadic'
+brew 'cabocha'
+brew 'pkg-config'
+brew 'libpng'
+brew 'freetype'
+brew 'fontconfig'
+brew 'pixman'
+brew 'gettext'
+brew 'libffi'
+brew 'glib'
+brew 'cairo'
+brew 'cmake'
+brew 'libsodium'
+brew 'zeromq'
+brew 'czmq'
+brew 'libtool'
+brew 'jpeg'
+brew 'libtiff'
+brew 'icu4c'
+brew 'pcre'
+brew 'git'
+brew 'gobject-introspection'
+brew 'harfbuzz'
+brew 'pango'
+brew 'imagemagick'
+brew 'emacs'
+brew 'faac'
+brew 'texi2html'
+brew 'readline'
+brew 'sqlite'
+brew 'gdbm'
+brew 'openssl'
+brew 'python'
+brew 'yasm'
+brew 'x264'
+brew 'lame'
+brew 'xvid'
+brew 'ffmpeg'
+brew 'fontforge'
+brew 'gmp'
+brew 'go'
+brew 'hub'
+brew 'libevent'
+brew 'mpfr'
+brew 'libmpc'
+brew 'libpqxx'
+brew 'libyaml'
+brew 'mysql'
+brew 'node'
+brew 'ossp-uuid'
+brew 'phantomjs'
+brew 'python3'
+brew 'qt'
+brew 'rbenv'
+brew 'reattach-to-user-namespace'
+brew 'redis'
+brew 'ruby'
+brew 'ruby-build'
+brew 'sl'
+brew 'the_silver_searcher'
+brew 'tmux'
+brew 'vim'
+brew 'wget'
+brew 'zsh'
+brew 'homebrew/versions/postgresql92'
+brew 'peco/peco/peco'
+brew 'sanemat/font/ricty'
