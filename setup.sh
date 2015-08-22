@@ -30,8 +30,9 @@ if [ `uname` = "Darwin" ]; then
     # home brew
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     # php
-    curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
+    #curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
   fi
+  brew tap Homebrew/brewdler
   brew bundle
 fi
 
