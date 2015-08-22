@@ -5,44 +5,44 @@ tap homebrew/binary
 update
 
 # Packages
-install wget
-install tig
-install zsh
-install ag
-install imagemagick
-install reattach-to-user-namespace
-install ctags
-install lynx
-install libxml2
-install libxslt
-install hub
-install tmux
-install libevent
-install fontforge
-install coreutils
-install bash-completion
-install openssl
-install source-highlight
-install vim --HEAD --enable-pythoninterp --with-lua
-install macvim --HEAD --with-lua --enable-pythoninterp --with-lua
-install nodejs
-install memcached
-install rbenv
-install ruby-build
-install rbenv-default-gems
-install packer
+brew wget
+brew tig
+brew zsh
+brew ag
+brew imagemagick
+brew reattach-to-user-namespace
+brew ctags
+brew lynx
+brew libxml2
+brew libxslt
+brew hub
+brew tmux
+brew libevent
+brew fontforge
+brew coreutils
+brew bash-completion
+brew openssl
+brew source-highlight
+brew vim, args: ['HEAD', 'enable-pythoninterp', 'with-lua']
+brew macvim, args: ['HEAD', 'enable-pythoninterp', 'with-lua']
+brew nodejs
+brew memcached
+brew rbenv
+brew ruby-build
+brew rbenv-default-gems
+brew packer
 linkapps
 curl-ca-bundle
-install go
+brew go
 
 tap peco/peco
-install peco
+brew peco
 
 tap homebrew/php
-install php55
-install php55-mcrypt
-install php55-intl
-install composer
+brew php55
+brew php55-mcrypt
+brew php55-intl
+brew composer
 
 linkapps
 
