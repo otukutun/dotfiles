@@ -78,6 +78,7 @@ brew 'homebrew/versions/postgresql92'
 brew 'peco/peco/peco'
 brew 'sanemat/font/ricty'
 brew 'awsebcli'
+brew 'jq'
 
 cask 'google-chrome'
 cask 'night-owl'
