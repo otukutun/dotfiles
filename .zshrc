@@ -153,6 +153,8 @@ alias pgitadd="git status -s | sed -e '/^[^ |\?]/d' | peco --prompt='[git add]' 
 # easily ssh using peco.
 alias pssh="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
 
+alias dev_answer="ssh okutsu@ec2-52-68-224-64.ap-northeast-1.compute.amazonaws.com"
+alias test101="ssh okutsu@ec2-52-68-107-2.ap-northeast-1.compute.amazonaws.com"
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
