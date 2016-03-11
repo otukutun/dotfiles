@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -153,6 +154,8 @@ alias pgitadd="git status -s | sed -e '/^[^ |\?]/d' | peco --prompt='[git add]' 
 # easily ssh using peco.
 alias pssh="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
 
+alias dev_answer="ssh okutsu@ec2-54-64-46-84.ap-northeast-1.compute.amazonaws.com"
+alias test101="ssh okutsu@ec2-52-68-107-2.ap-northeast-1.compute.amazonaws.com"
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
