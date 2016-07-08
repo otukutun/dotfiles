@@ -319,7 +319,7 @@ set autoindent
 set tabstop=2
 set incsearch
 set expandtab
-set list
+"set list
 "set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 " listchars
 " If there are uninstalled bundles found on startup,
