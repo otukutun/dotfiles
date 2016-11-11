@@ -80,6 +80,7 @@ brew 'peco/peco/peco'
 brew 'sanemat/font/ricty'
 brew 'awsebcli'
 brew 'jq'
+brew 'terraform'
 
 cask 'google-chrome'
 cask 'night-owl'
