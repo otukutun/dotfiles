@@ -69,6 +69,7 @@ brew 'peco/peco'
 brew 'awsebcli'
 brew 'awscli'
 brew 'the_silver_searcher'
+brew 'terraform'
 
 cask 'google-chrome'
 cask 'sequel-pro'
