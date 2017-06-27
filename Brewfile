@@ -87,6 +87,7 @@ cask 'insomnia'
 cask 'sketch'
 cask 'zeplin'
 cask 'zoom'
+cask 'docker'
 
 mas "1Password", id: 443987910
 mas "Simplenote", id: 692867256
