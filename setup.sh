@@ -45,10 +45,6 @@ ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 cp -f original-zsh/themes/otukutun.zsh-theme ~/dotfiles/.oh-my-zsh/themes/otukutun.zsh-theme
 chsh -s /bin/zsh
 
-#z.sh download
-git clone git@github.com:rupa/z.git ~/dotfiles/z
-ln -sf ~/dotfiles/z ~/z
-
 #neobundle,tmux,color-theme
 mkdir -p ~/.vim/bundle
 
