@@ -32,8 +32,9 @@ if [ `uname` = "Darwin" ]; then
     # php
     #curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
   fi
-  brew tap Homebrew/brewdler
+  brew tap Homebrew/bundle
   brew bundle
+  brew bundle cleanup
 fi
 
 cd ~/dotfiles/
