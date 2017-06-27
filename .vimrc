@@ -52,7 +52,7 @@ NeoBundle 'slim-template/vim-slim'
 " 静的解析
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'edsono/vim-matchit'
+NeoBundle 'adelarsq/vim-matchit'
 "NeoBundle 'vim-coffee-script'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
