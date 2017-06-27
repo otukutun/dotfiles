@@ -75,10 +75,6 @@ plugins=(git ruby osx bundler brew rails emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
 
-# z.sh install
-_Z_CMD=j
-source $HOME/z/z.sh
-
 # Mac
 if [ `uname` = "Darwin" ]; then
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
