@@ -1,7 +1,6 @@
 cask_args appdir: "/Applications"
 tap "caskroom/cask"
 tap "telemachus/brew", "https://telemachus@bitbucket.org/telemachus/brew.git"
-
 tap 'sanemat/font'
 brew 'crf++'
 brew 'pkg-config'
@@ -65,7 +64,7 @@ brew 'imagemagick'
 brew 'mysql', restart_service: true
 brew 'postgresql'
 brew 'heroku'
-brew 'peco/peco'
+brew 'peco'
 brew 'awsebcli'
 brew 'awscli'
 brew 'the_silver_searcher'
@@ -86,12 +85,11 @@ cask 'skitch'
 cask 'insomnia'
 cask 'sketch'
 cask 'zeplin'
-cask 'zoom'
+cask 'zoomus'
 cask 'docker'
 
 mas "1Password", id: 443987910
 mas "Simplenote", id: 692867256
-mas "iMovie", id: 408981434
 mas "SketchBookExpress", id: 404243625
 mas "Xcode", id: 497799835
 mas "LINE", id: 539883307
