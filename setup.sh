@@ -40,7 +40,7 @@ fi
 cd ~/dotfiles/
 
 #oh-my-zsh download
-git clone git@github.com:robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
 
 ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 cp -f original-zsh/themes/otukutun.zsh-theme ~/dotfiles/.oh-my-zsh/themes/otukutun.zsh-theme
