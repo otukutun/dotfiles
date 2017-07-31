@@ -45,6 +45,7 @@ brew 'libyaml'
 brew 'node'
 brew 'ossp-uuid'
 brew 'sanemat/font/ricty'
+brew 'graphviz'
 
 brew 'autoconf'
 brew 'xz'
