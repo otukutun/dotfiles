@@ -39,6 +39,13 @@ fi
 
 cd ~/dotfiles/
 
+ssh_dir=~/.ssh
+if [ ! -d $ssh_dir ]; then
+  mkdir ~/.ssh
+fi
+
+ln -sf ~/dotfiles/.ssh_config ~/.ssh/config
+
 #oh-my-zsh download
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dotfiles/.oh-my-zsh
 
