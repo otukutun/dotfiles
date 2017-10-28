@@ -170,5 +170,8 @@ bindkey '^x^p' peco-pkill
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 #
-#
+
+# Xcode change
+alias xcodel="sudo xcode-select --switch /Applications/Xcode.app"
+alias xcode8="sudo xcode-select --switch /Applications/Xcode8.app"
 
