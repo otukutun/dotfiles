@@ -14,6 +14,15 @@ I'll add this to some other setting little by little.
 $ git clone https://github.com/otukutun/dotfiles.git ~/dotfiles && cd ~/dotfiles && sh setup.sh
 ```
 
+## After set up
+
+```
+git remote set-url origin git@github.com:otukutun/dotfiles.git
+```
+
+- TODO
+  - `caps lock` => `control`
+
 ## How to delete
 
 ```
