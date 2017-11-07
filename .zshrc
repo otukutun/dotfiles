@@ -150,8 +150,6 @@ alias pgitadd="git status -s | sed -e '/^[^ |\?]/d' | peco --prompt='[git add]' 
 # easily ssh using peco.
 alias pssh="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
 
-alias dev_answer="ssh okutsu@ec2-54-64-46-84.ap-northeast-1.compute.amazonaws.com"
-alias test101="ssh okutsu@ec2-52-68-107-2.ap-northeast-1.compute.amazonaws.com"
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
@@ -172,6 +170,5 @@ bindkey '^x^p' peco-pkill
 #
 
 # Xcode change
-alias xcodel="sudo xcode-select --switch /Applications/Xcode.app"
-alias xcode8="sudo xcode-select --switch /Applications/Xcode8.app"
+alias cx="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
 
