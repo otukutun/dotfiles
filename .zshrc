@@ -105,6 +105,7 @@ alias gd='git diff'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gct="git branch -a | awk '{ print $1 }' | grep -e 'remotes\/' | sed -e 's/remotes\///g' | peco --prompt='[git checkout -t]' | xargs git checkout -t"
 
 # peco function
 function peco-history() {
