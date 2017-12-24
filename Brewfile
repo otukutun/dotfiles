@@ -89,6 +89,7 @@ cask 'zeplin'
 cask 'zoomus'
 cask 'docker'
 cask 'pg-commander'
+cask 'android-studio'
 
 mas "1Password", id: 443987910
 mas "Simplenote", id: 692867256
