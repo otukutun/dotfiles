@@ -71,6 +71,7 @@ brew 'awscli'
 brew 'the_silver_searcher'
 brew 'terraform'
 brew 'yarn'
+brew 'direnv'
 
 cask 'google-chrome'
 cask 'sequel-pro'
