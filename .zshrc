@@ -171,5 +171,5 @@ bindkey '^x^p' peco-pkill
 #
 
 # Xcode change
-alias cx="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
+alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
 
