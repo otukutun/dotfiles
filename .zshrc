@@ -88,8 +88,6 @@ fi
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
         export EDITOR='vim'
-else
-        export EDITOR='mvim'
 fi
 
 # emacs keybind
@@ -172,5 +170,3 @@ bindkey '^x^p' peco-pkill
 
 # Xcode change
 alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
-
-eval "$(direnv hook zsh)"
