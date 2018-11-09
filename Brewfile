@@ -46,6 +46,7 @@ brew 'node'
 brew 'ossp-uuid'
 brew 'sanemat/font/ricty'
 brew 'graphviz'
+brew 'jq'
 
 brew 'autoconf'
 brew 'xz'
