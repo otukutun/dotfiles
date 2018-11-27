@@ -73,6 +73,7 @@ brew 'the_silver_searcher'
 brew 'terraform'
 brew 'yarn'
 brew 'direnv'
+brew 'pre-commit'
 
 cask 'google-chrome'
 cask 'sequel-pro'
