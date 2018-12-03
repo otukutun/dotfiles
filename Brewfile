@@ -63,7 +63,7 @@ brew 'redis'
 brew 'ruby'
 brew 'ruby-build'
 brew 'imagemagick'
-brew 'mysql', restart_service: true
+brew 'mysql@5.7', restart_service: true
 brew 'postgresql'
 brew 'heroku'
 brew 'peco'
