@@ -170,3 +170,6 @@ bindkey '^x^p' peco-pkill
 
 # Xcode change
 alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
+
+# ShortCut To GitHub Pull Request Page.
+alias gp='hub browse -- pull/$(git symbolic-ref --short HEAD)'
