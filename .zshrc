@@ -173,3 +173,6 @@ alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | 
 
 # ShortCut To GitHub Pull Request Page.
 alias gp='hub browse -- pull/$(git symbolic-ref --short HEAD)'
+
+# ShortCut For StyleLint
+alias slint="git diff --name-only --cached -- '*.scss' '*.css' | xargs stylelint"
