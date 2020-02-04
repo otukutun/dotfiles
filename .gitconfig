@@ -1,9 +1,11 @@
 [user]
-        name = otukutun
-        email = orehaorz@gmail.com
+  name = otukutun
+  email = orehaorz@gmail.com
 [core]
-        editor = /usr/bin/vim
+  editor = /usr/bin/vim
 [color]
-        ui = auto
+  ui = auto
 [push]
-        default = simple
+  default = simple
+[core]
+  excludesfile = ~/.gitignore_global

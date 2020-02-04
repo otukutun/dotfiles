@@ -14,6 +14,7 @@ ln -sf ~/dotfiles/.vim ~/.vim
 #git simlink
 ln -sf ~/dotfiles/.gitignore ~/.gitignore
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 #tmux simlink
 if [ `uname` = "Darwin" ]; then

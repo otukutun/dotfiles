@@ -4,6 +4,7 @@
 .vim/bundle/*
 .oh-my-zsh
 .DS_Store
+.envrc
 z
 zaw
 .vim/bundle/neobundle.vim
