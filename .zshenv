@@ -6,8 +6,11 @@ export RBENV_ROOT=/usr/local/var/rbenv
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="~/.nodenv/shims:$PATH"
+export NODENV_SHELL=zsh
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(nodenv init -)"
 
 eval "$(direnv hook zsh)"
 
