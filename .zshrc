@@ -176,3 +176,6 @@ alias gp='hub browse -- pull/$(git symbolic-ref --short HEAD)'
 
 # ShortCut For StyleLint
 alias slint="git diff --name-only --cached -- '*.scss' '*.css' | xargs stylelint"
+alias ghqd='cd $(ghq list --full-path | peco )'
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
