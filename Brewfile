@@ -75,6 +75,7 @@ brew 'terraform'
 brew 'yarn'
 brew 'direnv'
 brew 'pre-commit'
+brew 'watchman'
 
 cask 'google-chrome'
 cask 'sequel-pro'
