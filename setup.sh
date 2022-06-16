@@ -54,8 +54,7 @@ ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 cp -f original-zsh/themes/otukutun.zsh-theme ~/dotfiles/.oh-my-zsh/themes/otukutun.zsh-theme
 chsh -s /bin/zsh
 
-#neobundle,tmux,color-theme
-mkdir -p ~/.vim/bundle
+#tmux,color-theme
 
 #tmuxinator install
 gem install tmuxinator
