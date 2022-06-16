@@ -31,7 +31,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \   'linux' : 'make',
       \ },
       \}
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'VimClojure'
@@ -41,7 +40,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'violetyk/cake.vim'
 "powerline tool
 NeoBundle 'itchyny/lightline.vim'
 
@@ -77,7 +75,6 @@ NeoBundleLazy 'alpaca-tc/alpaca_tags', {
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'tpope/vim-endwise' "rubyでend勝手に入力してくれるやつ
-NeoBundle 'tpope/vim-fugitive' "Gitを便利に使うやつ
 "NeoBundle 'nathanaelkane/vim-indent-guides' "インデントに色を付けて見やすくする
 "
 "
