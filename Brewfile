@@ -77,28 +77,17 @@ brew 'direnv'
 brew 'pre-commit'
 
 cask 'google-chrome'
-cask 'sequel-pro'
 cask 'iterm2'
 cask 'slack'
-cask 'google-japanese-ime'
-cask 'alfred'
-cask 'atom'
 cask 'dropbox'
-cask 'dash'
-cask 'gyazo'
 cask 'skitch'
 cask 'insomnia'
 cask 'sketch'
-cask 'zeplin'
 cask 'zoomus'
 cask 'docker'
-cask 'pg-commander'
 cask 'android-studio'
 cask 'visual-studio-code'
 
 mas "1Password", id: 443987910
-mas "Simplenote", id: 692867256
-mas "SketchBookExpress", id: 404243625
 mas "Xcode", id: 497799835
-mas "LINE", id: 539883307
 
