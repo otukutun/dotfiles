@@ -75,6 +75,7 @@ brew 'terraform'
 brew 'yarn'
 brew 'direnv'
 brew 'pre-commit'
+brew 'ghq'
 
 cask 'google-chrome'
 cask 'iterm2'
