@@ -83,11 +83,10 @@ cask 'dropbox'
 cask 'skitch'
 cask 'insomnia'
 cask 'sketch'
-cask 'zoomus'
+cask 'zoom'
 cask 'docker'
 cask 'android-studio'
 cask 'visual-studio-code'
 
-mas "1Password", id: 443987910
 mas "Xcode", id: 497799835
 
