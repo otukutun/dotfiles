@@ -1,7 +1,7 @@
 cask_args appdir: "/Applications"
-tap "caskroom/cask"
-tap "telemachus/brew", "https://telemachus@bitbucket.org/telemachus/brew.git"
+tap 'Homebrew/cask'
 tap 'sanemat/font'
+tap 'heroku/brew'
 brew 'crf++'
 brew 'pkg-config'
 brew 'libpng'
@@ -87,6 +87,4 @@ cask 'zoom'
 cask 'docker'
 cask 'android-studio'
 cask 'visual-studio-code'
-
-mas "Xcode", id: 497799835
 
