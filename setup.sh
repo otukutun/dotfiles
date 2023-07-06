@@ -41,22 +41,8 @@ chsh -s /bin/zsh
 
 #tmux,color-theme
 
-#tmuxinator install
-gem install tmuxinator
-gem install aws-sdk
-gem install ec2ssh
-gem install rubocop
-gem install refe2
-ln -sf ~/dotfiles/.tmuxinator ~/.tmuxinator
 
 # peco setting
 ln -sf ~/dotfiles/.peco ~/.peco
 
-# gemrc setting
-ln -sf ~/dotfiles/.gemrc ~/.gemrc
-
-#mkdir -p ~/.vim/colors
-#curl -S -o ~/dotfiles/.vim/colors/Tomorrow-Night-Eightie.vim https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim
-
-git clone git://github.com/erikw/tmux-powerline ~/dotfiles/.vim/bundle/tmux-powerline
 git clone git://github.com/seebi/dircolors-solarized ~/dotfiles/.vim/bundle/dircolors-solarized
