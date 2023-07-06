@@ -1,7 +1,7 @@
 cask_args appdir: "/Applications"
-tap "caskroom/cask"
-tap "telemachus/brew", "https://telemachus@bitbucket.org/telemachus/brew.git"
+tap 'Homebrew/cask'
 tap 'sanemat/font'
+tap 'heroku/brew'
 brew 'crf++'
 brew 'pkg-config'
 brew 'libpng'
@@ -75,31 +75,17 @@ brew 'terraform'
 brew 'yarn'
 brew 'direnv'
 brew 'pre-commit'
-brew 'watchman'
+brew 'ghq'
 
 cask 'google-chrome'
-cask 'sequel-pro'
 cask 'iterm2'
 cask 'slack'
-cask 'google-japanese-ime'
-cask 'alfred'
-cask 'atom'
 cask 'dropbox'
-cask 'dash'
-cask 'gyazo'
 cask 'skitch'
 cask 'insomnia'
 cask 'sketch'
-cask 'zeplin'
-cask 'zoomus'
+cask 'zoom'
 cask 'docker'
-cask 'pg-commander'
 cask 'android-studio'
 cask 'visual-studio-code'
-
-mas "1Password", id: 443987910
-mas "Simplenote", id: 692867256
-mas "SketchBookExpress", id: 404243625
-mas "Xcode", id: 497799835
-mas "LINE", id: 539883307
 

@@ -10,8 +10,5 @@ export PATH="~/.nodenv/shims:$PATH"
 export NODENV_SHELL=zsh
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-eval "$(nodenv init -)"
-
-eval "$(direnv hook zsh)"
 
 export LC_ALL=ja_JP.UTF-8

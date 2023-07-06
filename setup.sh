@@ -22,21 +22,6 @@ if [ `uname` = "Darwin" ]; then
 else
   ln -sf ~/dotfiles/.ubuntu_tmux.conf ~/.tmux.conf
 fi
-#for mac simlink
-ln -sf ~/dotfiles/Brewfile ~/Brewfile
-
-# Mac
-if [ `uname` = "Darwin" ]; then
-  if [ -z `which brew` ]; then
-    # home brew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    # php
-    #curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
-  fi
-  brew tap Homebrew/bundle
-  brew bundle
-  brew bundle cleanup
-fi
 
 cd ~/dotfiles/
 
