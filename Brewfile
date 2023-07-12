@@ -88,4 +88,5 @@ cask 'zoom'
 cask 'docker'
 cask 'android-studio'
 cask 'visual-studio-code'
+cask 'session-manager-plugin'
 
