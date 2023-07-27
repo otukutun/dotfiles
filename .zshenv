@@ -9,6 +9,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="~/.nodenv/shims:$PATH"
 export NODENV_SHELL=zsh
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 export LC_ALL=ja_JP.UTF-8
