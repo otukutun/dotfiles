@@ -103,7 +103,6 @@ alias gd='git diff'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gct="git branch -a | awk '{ print $1 }' | grep -e 'remotes\/' | sed -e 's/remotes\///g' | peco --prompt='[git checkout -t]' | xargs git checkout -t"
 
 # peco function
 function peco-history() {
@@ -130,7 +129,7 @@ local item
 item=$(git branch | peco | sed -e "s/^\*[ ]*//g")
 if [[ -z "$item" ]]; then return 1
 fi
-BUFFER="git checkout $item"
+BUFFER="git switch $item"
 CURSOR=$#BUFFER
 zle accept-line
 }
@@ -144,7 +143,10 @@ done
 }
 
 # easily git add
-alias pgitadd="git status -s | sed -e '/^[^ |\?]/d' | peco --prompt='[git add]' | awk '{print \$2}' | xargs git add"
+alias pgitadd="git status -s | sed -e '/^[^ |\?|^A]/d' | peco --prompt='[git add]' | awk '{print \$2}' | xargs git add"
+
+# git switch from remote
+alias pgitswitchr="git branch -a | awk '{ print $1 }' | grep -e 'remotes\/origin\/' | sed -e 's/remotes\/origin\///g' | peco --prompt='[git switch]' | xargs git switch"
 
 # easily ssh using peco.
 alias pssh="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
