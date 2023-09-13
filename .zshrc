@@ -166,7 +166,6 @@ bindkey '^x^p' peco-pkill
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-#
 
 # Xcode change
 alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
@@ -176,6 +175,12 @@ alias gp='hub browse -- pull/$(git symbolic-ref --short HEAD)'
 
 # ShortCut For StyleLint
 alias slint="git diff --name-only --cached -- '*.scss' '*.css' | xargs stylelint"
-alias ghql='cd $(ghq list --full-path | peco )'
-export PATH="/usr/local/opt/php@7.3/bin:$PATH"
-export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+# List ghq repositories.
+alias lsghq='cd $(ghq list --full-path | peco )'
+
+# Initialize nodenv
+eval "$(nodenv init -)"
+
+# Initialize rbenv
+# eval "$(rbenv init -)"
+
