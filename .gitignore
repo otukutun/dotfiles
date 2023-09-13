@@ -8,5 +8,6 @@
 .vim/bundle/neobundle.vim
 .peco/.peco
 .vim/.vim
+.zsh_private
 
 Brewfile.lock.json

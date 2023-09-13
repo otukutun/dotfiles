@@ -187,3 +187,9 @@ eval "$(nodenv init -)"
 # Initialize direnv
 eval "$(direnv hook zsh)"
 
+# Init private alias
+PRIVATE_ALIAS=~/dotfiles/.zsh_private
+if [ -e $PRIVATE_ALIAS ]; then
+  source $PRIVATE_ALIAS
+fi
+

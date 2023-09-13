@@ -7,6 +7,9 @@ cd ~
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.zshenv ~/.zshenv
 
+#init zsh private
+touch ~/dotfiles/.zsh_private
+
 #vim simlink
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.vim ~/.vim
