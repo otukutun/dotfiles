@@ -184,3 +184,6 @@ eval "$(nodenv init -)"
 # Initialize rbenv
 # eval "$(rbenv init -)"
 
+# Initialize direnv
+eval "$(direnv hook zsh)"
+
