@@ -22,8 +22,6 @@ ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 #tmux simlink
 if [ `uname` = "Darwin" ]; then
   ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-else
-  ln -sf ~/dotfiles/.ubuntu_tmux.conf ~/.tmux.conf
 fi
 
 cd ~/dotfiles/
