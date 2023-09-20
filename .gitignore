@@ -9,5 +9,6 @@
 .peco/.peco
 .vim/.vim
 .zsh_private
+.tmuxinator/*
 
 Brewfile.lock.json
