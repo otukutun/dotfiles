@@ -1,4 +1,4 @@
-FILES=(.bashrc .zshrc .oh-my-zsh .vimrc .tmux.conf .vim .gitignore .gitconfig Brewfile z .tmuxinator dotfiles) 
+FILES=(.zshrc .oh-my-zsh .vimrc .tmux.conf .vim .gitignore .gitconfig .gitignore_global Brewfile .tmuxinator dotfiles) 
 
 for file in ${FILES[@]}; do
   if [ -e $file ]; then
