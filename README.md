@@ -11,7 +11,7 @@ I'll add this to some other setting little by little.
 ## How to set up
 
 ```
-$ git clone https://github.com/otukutun/dotfiles.git ~/dotfiles && cd ~/dotfiles && sh setup.sh
+$ git clone https://github.com/otukutun/dotfiles.git ~/dotfiles && cd ~/dotfiles && sh scripts/setup.sh
 ```
 
 ## After set up
@@ -26,7 +26,7 @@ git remote set-url origin git@github.com:otukutun/dotfiles.git
 ## How to delete
 
 ```
-$ cd ~/dotfiles && sh delete.sh
+$ cd ~/dotfiles && sh scripts/delete.sh
 ```
 
 
