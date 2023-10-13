@@ -178,7 +178,7 @@ alias gp='hub browse -- pull/$(git symbolic-ref --short HEAD)'
 # ShortCut For StyleLint
 alias slint="git diff --name-only --cached -- '*.scss' '*.css' | xargs stylelint"
 # List ghq repositories.
-alias lsghq='cd $(ghq list --full-path | peco )'
+alias pghq='cd $(ghq list --full-path | peco )'
 
 # Initialize nodenv
 eval "$(nodenv init -)"
