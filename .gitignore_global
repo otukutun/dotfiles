@@ -3,3 +3,4 @@
 .node-version
 .idea/*
 .phpunit.result.cache
+auth.json
