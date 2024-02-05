@@ -12,7 +12,8 @@ ZSH_THEME="otukutun"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-autoload -U compinit; compinit
+# autoload -U compinit; compinit
+autoload -Uz compinit && compinit
 
 # cdr setting
 autoload -Uz add-zsh-hook
@@ -185,6 +186,7 @@ eval "$(nodenv init -)"
 
 # Initialize rbenv
 # eval "$(rbenv init -)"
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
 
 # Initialize direnv
 eval "$(direnv hook zsh)"
