@@ -1,28 +1,25 @@
 #!/bin/sh
 
 cd ~
-#mkdir bin swap backup tmp memo tags src .trash .tmux
 
-#zsh simlink
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.zshenv ~/.zshenv
+# Simlink for zsh, vim git
+#.zsh_privateは.zshrcから呼び出される。公開できないものはこちらに記載する
+links=(
+  .zshrc
+  .zshenv
+  .vimrc
+  .vim
+  .gitignore
+  .gitconfig
+  .gitignore_global
+  .peco
+  .tmux.conf
+)
 
-#init zsh private
-touch ~/dotfiles/.zsh_private
-
-#vim simlink
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.vim ~/.vim
-
-#git simlink
-ln -sf ~/dotfiles/.gitignore ~/.gitignore
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
-
-#tmux simlink
-if [ `uname` = "Darwin" ]; then
-  ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-fi
+for link in $links; do
+  ln -sf "$HOME/dotfiles/$link" "$HOME/$link"
+done
+exit;
 
 cd ~/dotfiles/
 
@@ -40,10 +37,5 @@ ln -sf ~/dotfiles/.oh-my-zsh/ ~/.oh-my-zsh
 cp -f original-zsh/themes/otukutun.zsh-theme ~/dotfiles/.oh-my-zsh/themes/otukutun.zsh-theme
 chsh -s /bin/zsh
 
-#tmux,color-theme
-
-
-# peco setting
-ln -sf ~/dotfiles/.peco ~/.peco
-
 git clone git://github.com/seebi/dircolors-solarized ~/dotfiles/.vim/bundle/dircolors-solarized
+
