@@ -76,6 +76,7 @@ brew 'yarn'
 brew 'direnv'
 brew 'pre-commit'
 brew 'ghq'
+brew 'gh'
 
 cask 'google-chrome'
 cask 'iterm2'
