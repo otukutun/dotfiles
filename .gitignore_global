@@ -3,4 +3,5 @@
 .node-version
 .idea/*
 .phpunit.result.cache
+.netrwhist
 auth.json
