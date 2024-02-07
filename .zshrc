@@ -104,6 +104,10 @@ alias gd='git diff'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gr='git restore'
+
+# for docker
+alias d='docker'
 
 # peco function
 function peco-history() {
@@ -174,7 +178,7 @@ bindkey '^x^p' peco-pkill
 alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
 
 # ShortCut To GitHub Pull Request Page.
-alias gp='hub browse -- pull/$(git symbolic-ref --short HEAD)'
+alias pr='hub browse -- pull/$(git symbolic-ref --short HEAD)'
 
 # ShortCut For StyleLint
 alias slint="git diff --name-only --cached -- '*.scss' '*.css' | xargs stylelint"
