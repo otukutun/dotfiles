@@ -1,5 +1,5 @@
 setopt no_global_rcs
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/opt/homebrew/bin/vim
 export SHELL=/usr/local/bin/zsh
 export TERM=xterm-256color
 export RBENV_ROOT=/usr/local/var/rbenv
