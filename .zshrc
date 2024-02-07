@@ -153,9 +153,6 @@ alias pgitadd="git status -s | sed -e '/^[^ |\?|^A]/d' | peco --prompt='[git add
 # git switch from remote
 alias pgitswitchr="git branch -a | awk '{ print $1 }' | grep -e 'remotes\/origin\/' | sed -e 's/remotes\/origin\///g' | peco --prompt='[git switch]' | xargs git switch"
 
-# easily ssh using peco.
-alias pssh="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
-
 zle -N peco-history
 bindkey '^x^r' peco-history 
 
@@ -171,17 +168,13 @@ bindkey '^x^p' peco-pkill
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # Xcode change
 alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
 
 # ShortCut To GitHub Pull Request Page.
 alias pr='hub browse -- pull/$(git symbolic-ref --short HEAD)'
+alias prl="gh search prs --state=open --review-requested=@me --json title,url,repository | jq -r '.[] | \"[\(.repository.name)] \(.title) \(.url)\"'"
 
-# ShortCut For StyleLint
-alias slint="git diff --name-only --cached -- '*.scss' '*.css' | xargs stylelint"
 # List ghq repositories.
 alias pghq='cd $(ghq list --full-path | peco )'
 
