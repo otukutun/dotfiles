@@ -19,7 +19,6 @@ links=(
 for link in $links; do
   ln -sf "$HOME/dotfiles/$link" "$HOME/$link"
 done
-exit;
 
 cd ~/dotfiles/
 
