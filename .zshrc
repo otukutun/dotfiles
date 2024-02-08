@@ -145,6 +145,17 @@ do
 done
 }
 
+# REF: https://www.jetbrains.com/help/phpstorm/opening-files-from-command-line.html#macos
+function peco-phpstorm() {
+  appPath="/Applications/PhpStorm.app"
+  if [ -d "$appPath" ]; then
+    ghq list --full-path | peco | xargs open -na "PhpStorm.app" --args "$@"
+  else
+    return 1;
+  fi
+}
+alias phpstorm="peco-phpstorm"
+
 # easily git add
 alias pgitadd="git status -s | sed -e '/^[^ |\?|^A]/d' | peco --prompt='[git add]' | awk '{print \$2}' | xargs git add"
 
