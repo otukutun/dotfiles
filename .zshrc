@@ -100,11 +100,16 @@ alias git='hub'
 alias g='git'
 alias gd='git diff'
 alias gs='git status'
+alias gsw='git switch'
+alias gswc='git switch -c'
+alias gswt='git switch -t'
 alias ga='git add'
 alias gc='git commit'
 alias gr='git restore'
 alias gp='git push'
-alias gpf='git push --force-with-lease'
+# REF: https://zenn.dev/mary_pp/articles/eaac544eaf600a
+alias gpf='git push --force-with-lease --force-if-includes'
+alias gp='git push'
 
 # for docker
 alias d='docker'
