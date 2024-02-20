@@ -109,7 +109,6 @@ alias gr='git restore'
 alias gp='git push'
 # REF: https://zenn.dev/mary_pp/articles/eaac544eaf600a
 alias gpf='git push --force-with-lease --force-if-includes'
-alias gp='git push'
 
 # for docker
 alias d='docker'
