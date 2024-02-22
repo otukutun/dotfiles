@@ -215,8 +215,9 @@ function setup-web2-on-tmux() {
   # フロントエンドを起動する
   # send-keysでキー入力。
   readonly target="$1"
+  readonly subcommand="$2"
   tmux send-keys "cd ${target}" C-m
-  tmux send-keys 'yarn start' C-m
+  tmux send-keys "yarn ${subcommand}" C-m
 
   # 右下のペインを使う
   tmux selectp -D
