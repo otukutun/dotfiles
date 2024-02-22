@@ -112,6 +112,7 @@ alias gpf='git push --force-with-lease --force-if-includes'
 
 # for docker
 alias d='docker'
+alias dcc='docker-compose'
 
 # peco function
 function peco-history() {
@@ -122,8 +123,10 @@ function peco-history() {
   BUFFER="$item"
   CURSOR=$#BUFFER
 }
+zle -N peco-history
+bindkey '^x^r' peco-history
 
-function peco-cdr() {
+function peco-cd() {
   local item
   item=$(cdr -l | sed 's/^[^ ]\{1,\} \{1,\}//' | peco)
   if [[ -z "$item" ]]; then return 1
@@ -132,6 +135,9 @@ function peco-cdr() {
   CURSOR=$#BUFFER
   zle accept-line
 }
+zle -N peco-cd
+bindkey '^xb' peco-cd
+
 
 function peco-git-branch() {
   local item
@@ -142,14 +148,8 @@ function peco-git-branch() {
   CURSOR=$#BUFFER
   zle accept-line
 }
-
-function peco-pkill() {
-for pid in $(ps aux | peco | awk '{ print $2 }')
-do
-        kill -9 $pid
-        echo "Killed ${pid}"
-done
-}
+zle -N peco-git-branch
+bindkey '^x^g' peco-git-branch
 
 # REF: https://www.jetbrains.com/help/phpstorm/opening-files-from-command-line.html#macos
 function peco-phpstorm() {
@@ -203,23 +203,9 @@ alias pgitadd="git status -s | sed -e '/^[^ |\?|^A]/d' | peco --prompt='[git add
 # git switch from remote
 alias pgitswitchr="git branch -a | awk '{ print $1 }' | grep -e 'remotes\/origin\/' | sed -e 's/remotes\/origin\///g' | peco --prompt='[git switch]' | xargs git switch"
 
-zle -N peco-history
-bindkey '^x^r' peco-history 
-
-zle -N peco-cdr
-bindkey '^xb' peco-cdr
-
-zle -N peco-git-branch
-bindkey '^x^g' peco-git-branch
-
-zle -N peco-pkill
-bindkey '^x^p' peco-pkill
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Xcode change
-alias xcodechange="ls /Applications | sed -e 's/\.app$//g' | grep -E '^Xcode' | peco | xargs -I{} sudo xcode-select --switch /Applications/{}.app"
 
 # ShortCut To GitHub Pull Request Page.
 alias pr='hub browse -- pull/$(git symbolic-ref --short HEAD)'
