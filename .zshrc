@@ -115,32 +115,32 @@ alias d='docker'
 
 # peco function
 function peco-history() {
-local item
-item=$(builtin history -n -r 1 | peco --query="$LBUFFER")
-if [[ -z "$item" ]]; then return 1
-fi
-BUFFER="$item"
-CURSOR=$#BUFFER
+  local item
+  item=$(builtin history -n -r 1 | peco --query="$LBUFFER")
+  if [[ -z "$item" ]]; then return 1
+  fi
+  BUFFER="$item"
+  CURSOR=$#BUFFER
 }
 
 function peco-cdr() {
-local item
-item=$(cdr -l | sed 's/^[^ ]\{1,\} \{1,\}//' | peco)
-if [[ -z "$item" ]]; then return 1
-fi
-BUFFER="cd -- $item"
-CURSOR=$#BUFFER
-zle accept-line
+  local item
+  item=$(cdr -l | sed 's/^[^ ]\{1,\} \{1,\}//' | peco)
+  if [[ -z "$item" ]]; then return 1
+  fi
+  BUFFER="cd -- $item"
+  CURSOR=$#BUFFER
+  zle accept-line
 }
 
 function peco-git-branch() {
-local item
-item=$(git branch | peco | sed -e "s/^\*[ ]*//g")
-if [[ -z "$item" ]]; then return 1
-fi
-BUFFER="git switch $item"
-CURSOR=$#BUFFER
-zle accept-line
+  local item
+  item=$(git branch | peco | sed -e "s/^\*[ ]*//g")
+  if [[ -z "$item" ]]; then return 1
+  fi
+  BUFFER="git switch $item"
+  CURSOR=$#BUFFER
+  zle accept-line
 }
 
 function peco-pkill() {
@@ -153,7 +153,7 @@ done
 
 # REF: https://www.jetbrains.com/help/phpstorm/opening-files-from-command-line.html#macos
 function peco-phpstorm() {
-  appPath="/Applications/PhpStorm.app"
+  local appPath="/Applications/PhpStorm.app"
   if [ -d "$appPath" ]; then
     ghq list --full-path | peco | xargs open -na "PhpStorm.app" --args "$@"
   else
@@ -185,8 +185,8 @@ function setup-web-on-tmux() {
 
   # フロントエンドを起動する
   # send-keysでキー入力。
-  readonly subcommand="$1"
-  readonly target="$2"
+  local subcommand="$1"
+  local target="$2"
   if [ -n "$target" ]; then
     tmux send-keys "cd ${target}" C-m
   fi
