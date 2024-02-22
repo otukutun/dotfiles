@@ -162,6 +162,67 @@ function peco-phpstorm() {
 }
 alias phpstorm="peco-phpstorm"
 
+# tmuxinatorで実現しようとしたが、随時立ち上げたいProjectに対応したいのでこれを作った
+# REF: https://zenn.dev/azunasu/articles/25d9999ca0fb96?utm_source=pocket_saves#%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%92%E7%94%A8%E6%84%8F%E3%81%99%E3%82%8B
+# フロントエンドの階層が同じの場合
+function setup-web-on-tmux() {
+  # ペインを左右に分割する
+  tmux splitw -h
+
+  # 右のペインに移動後、ペインを上下に分割
+  tmux splitw -v
+
+  # 左のペインを使う
+  tmux selectp -L
+
+  # バックエンドを起動する
+  # send-keysでキー入力。
+  tmux send-keys 'git pull' C-m
+  tmux send-keys 'docker-compose up' C-m
+
+  # 右のペインを使う
+  tmux selectp -R
+  tmux selectp -U
+
+  # フロントエンドを起動する
+  # send-keysでキー入力。
+  tmux send-keys 'yarn start' C-m
+
+  # 右下のペインを使う
+  tmux selectp -D
+}
+
+# フロントエンドの階層が別の場合
+function setup-web2-on-tmux() {
+  # ペインを左右に分割する
+  tmux splitw -h
+
+  # 右のペインに移動後、ペインを上下に分割
+  tmux splitw -v
+
+  # 左のペインを使う
+  tmux selectp -L
+
+  # バックエンドを起動する
+  # send-keysでキー入力。
+  tmux send-keys 'git pull' C-m
+  tmux send-keys 'docker-compose up' C-m
+
+  # 右のペインを使う
+  tmux selectp -R
+  tmux selectp -U
+
+  # フロントエンドを起動する
+  # send-keysでキー入力。
+  readonly target="$1"
+  tmux send-keys "cd ${target}" C-m
+  tmux send-keys 'yarn start' C-m
+
+  # 右下のペインを使う
+  tmux selectp -D
+}
+
+
 # easily git add
 alias pgitadd="git status -s | sed -e '/^[^ |\?|^A]/d' | peco --prompt='[git add]' | awk '{print \$2}' | xargs git add"
 
