@@ -20,3 +20,8 @@ export LC_ALL=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
+# Init private env
+PRIVATE_ENV=~/dotfiles/.zshenv_private
+if [ -e $PRIVATE_ENV ]; then
+  source $PRIVATE_ENV
+fi
