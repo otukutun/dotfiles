@@ -9,7 +9,8 @@
   default = simple
 [core]
   excludesfile = ~/.gitignore_global
+  ignoreCase = false
 [pull]
   rebase = false
 [init]
-	defaultBranch = main
+  defaultBranch = main
