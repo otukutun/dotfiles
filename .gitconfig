@@ -3,13 +3,12 @@
   email = otukutun@gmail.com
 [core]
   editor = /usr/bin/vim
+  excludesfile = ~/.gitignore_global
+  ignoreCase = false
 [color]
   ui = auto
 [push]
   default = simple
-[core]
-  excludesfile = ~/.gitignore_global
-  ignoreCase = false
 [pull]
   rebase = false
 [init]
