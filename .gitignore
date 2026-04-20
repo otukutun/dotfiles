@@ -11,5 +11,6 @@
 .zsh_private
 .zshenv_private
 .tmuxinator/*
+.claude
 
 Brewfile.lock.json
