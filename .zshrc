@@ -57,8 +57,6 @@ setopt inc_append_history   # as soon as append history
 
 setopt AUTO_PUSHD # stack cd diretotires
 setopt PUSHD_IGNORE_DUPS # don't record multimple history
-autoload -Uz compinit
-compinit
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -75,7 +73,7 @@ plugins=(git ruby macos bundler brew rails emoji-clock dotenv)
 source $ZSH/oh-my-zsh.sh
 
 # Mac
-if [ `uname` = "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
 # User configuration
@@ -177,7 +175,7 @@ function setup-web-on-tmux() {
   # バックエンドを起動する
   # send-keysでキー入力。
   tmux send-keys 'git pull' C-m
-  tmux send-keys 'docker-compose up' C-m
+  tmux send-keys 'docker compose up' C-m
 
   # 右のペインを使う
   tmux selectp -R
